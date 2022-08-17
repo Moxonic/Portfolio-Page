@@ -6,16 +6,3 @@ import './index.css'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 root.render(<App/>)
-////////////////////////////////////////////////////////
-
-
-
-
-
-
-// import ReactDOM from'react-dom'
-// import App from './App'
-// import './index.css'
-
-
-// ReactDOM.createRoot(<App/>, document.querySelector('#root'))

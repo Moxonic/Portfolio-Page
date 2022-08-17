@@ -4,8 +4,7 @@ import Nav from './components/nav/Nav.jsx'
 import About from './components/about/About.jsx'
 import Experience from './components/experience/Experience'
 import Service from './components/service/Service'
-import Portfolio from './components/portfolio/Portfolio'
-import Testimonials from './components/testimonials/Testimonials'
+import Contact from './components/contact/Contact'
 
 const App = () => {
   return (
@@ -15,9 +14,9 @@ const App = () => {
       <About />
       <Experience />
       <Service />
-      <Portfolio />
-      <Testimonials />
-   </>
+      <Contact/>
+    
+  </>
   )
 }
 

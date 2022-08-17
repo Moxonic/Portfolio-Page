@@ -6,22 +6,25 @@ import HeaderSocials from "./HeaderSocials";
 
 const Header = () => {
   return (
-    <header>
-      <div className="container header__container">
+    <section id='header'className="container header__container">
+      <div className="header_container_div">
         <h5> Hello I'm </h5>
-        <h1> Daniel Soto Delgado </h1>{" "}
-        <h5 className="text-light"> Frontend Developer </h5>
-        <CTA />
+        <h2> Daniel Soto Delgado </h2>
+        {/* <h5 className="text-light"> Frontend Developer </h5> */}
+       
         <HeaderSocials />
         <div className="me">
-          <img className='myPic' src={MYPIC} alt="picture of Daniel">
+          <img className='myPic' src={MYPIC} alt="Daniel looking good">
           </img>
-        </div>
+        </div> 
+        
+        <CTA /> {/* download and contact buttons */}
+
         <a href="#contact" className="scroll__down">
-          Scroll Down
+            Scroll Down
         </a>
       </div>
-    </header>
+    </section>
   );
 };
 

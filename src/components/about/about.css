@@ -1,0 +1,28 @@
+
+
+
+#about{
+    position:relative;
+}
+
+.aboutme{
+    position:absolute;
+    padding:5rem;
+}
+
+.about__text > *{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+.myPicAbout{
+    border: 1cm;
+    padding:3cm;
+    width:3cm;
+    border-radius: 50%;
+}
+
