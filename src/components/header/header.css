@@ -1,8 +1,10 @@
 #header {
     top:auto;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
 }
+
+
 
 .header__container {
     text-align: center;
@@ -11,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow:visible; */
 }
 
 
@@ -48,7 +51,6 @@
 
 .me {
     background: linear-gradient( var(--color-primary), transparent);
-  
     width: 160px;
     height: 200px;
     position: static;
@@ -57,8 +59,9 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 12rem 12rem 0 0;
-    overflow: hidden;
+    overflow: visible;
     padding: 5px;
+    
 }
 
 
@@ -69,16 +72,38 @@
     height:1rem;
     position: absolute;
     right: -2.3rem;
-    bottom:5rem;
+    bottom: 5rem;
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
 }
 
+
+@keyframes black-in{
+    0% { -webkit-box-shadow: 0px 0px 9px 9999px rgba(0, 0, 0, 1)
+        /* inset 0 0 999px 999px #000000 */
+        ;
+        /* -webkit-box-shadow: inset 0 0 999px #000000; */
+
+}
+    /* 20% {-webkit-box-shadow: 0px 0px 9px 999px rgba(0, 0, 0, 1);
+    } */
+    100% { -webkit-box-shadow: 0px 0px 20px 999px rgba(0, 0, 0, 0);
+       /* -webkit-box-shadow: inset 0 0 999px #000000; */
+    }
+}
 .myPic{
-    border-radius:50%;
+    position: relative;
+    top:auto;
+    z-index: 999;
+    border-radius: 50%;
+   /* -webkit-box-shadow: inset 0 0 999px 99px #000000; */
+    background-color: black;
     width: 150px;
     height: 150px;
-    /* padding: 5px;  */
     margin: auto;
+    animation-name: black-in;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-fill-mode: backwards;
 }

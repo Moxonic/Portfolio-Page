@@ -2,6 +2,7 @@ import React from 'react'
 import './About'
 import './about.css'
 import FREEDSD from '../../assets/Danielfree22.png'
+import './About.js'
 
 const About = () => {
   return (
@@ -11,7 +12,10 @@ const About = () => {
         to You
         </h1>
         <div className='about__text'>
-          <p className='bg-blue-400 black '> 
+
+        <div class="word"></div>
+
+          {/* <p className='bg-blue-400 black '> 
             Daniel is starting his career as a Frontend Developer.
           </p>
           <p>
@@ -22,7 +26,7 @@ const About = () => {
           </p>
           <p>
             Of course, he is just about to start it with you.
-          </p>
+          </p> */}
 
         </div>
         <div >
