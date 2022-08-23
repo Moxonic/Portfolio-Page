@@ -3,6 +3,11 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
+/* html {
+    scroll-snap-type: y proximity;
+} */
+
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +31,7 @@
 
     --container-width-lg: 75%;
     --container-width-md: 86%;
-    --container-width-ms: 90%;
+    --container-width-sm: 90%;
 
 }
 
@@ -52,7 +57,8 @@ body{
  .container{                                    /*all Components have these attributes*/
     width: var(--container-width-lg);
     margin: 0 auto;
-    
+    scroll-snap-type: y mandatory;
+    height: inherit;
 }
 
 h1,
@@ -69,7 +75,6 @@ h1{
 }
 
 section {
-    margin-top: 8rem; 
     height: 100vh;
 }
 
@@ -125,9 +130,9 @@ object-fit : cover;
         width: var(--container-width-md);
     }
 
-    section {
+    /* section {
         margin-top: 6rem;
-    }
+    } */
 }
 
 /* ==========MEDIA QUERIES SMALL DEVICES=========*/

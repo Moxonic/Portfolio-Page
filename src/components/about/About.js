@@ -3,9 +3,9 @@ import $ from 'jquery'
 var words = [
     "Hi, I am starting my career as a Frontend Developer",
     "I built this website with HTML, CSS, Javascript and React",
-    "Are you surprised why my introduction is so short?",
-    "Because I am just getting started right here, right now",
-    "Hire me",
+    "Are you surprised why my introduction is so short...?",
+    "I am just getting started",
+    "Please scroll on ...",
 ],
     part,
     i = 0,

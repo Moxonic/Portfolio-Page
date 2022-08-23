@@ -1,37 +1,41 @@
-
-
-
 #about{
     position:relative;
+
+    scroll-snap-align: start;
+
 }
 
 .container__about{
     position:relative;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 .aboutme{
-    position:absolute;
-    padding:5rem;
+   width: 100%;
 }
 
-.about__text > *{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+.about__text {
+    width: 50%;
+}
+.word {
     position: relative;
-    display: flex;
+    min-width: 1px;
 }
-
+.about__piccont{
+    background-color: aquamarine;
+    width: 15cm;
+}
 .myPicAbout{
-    position: absolute;
-    bottom:0;
+    /* position: absolute; */
     filter: drop-shadow(0px -2px 9px   rgba(1, 73, 255, 0.367));
     width:5cm;
     height: 5cm;
-    right: 0;
-    display: flex;
-    align-self: center;
+    max-width: 50%;
+    max-height: 50%;
     border-radius: 50%;
-    top: 50vh;
+    /* top: 50vh; */
 }
 

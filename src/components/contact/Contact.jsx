@@ -9,7 +9,7 @@ const Contact = () => {
       <h5>Get in touch</h5>
       <h2> Contact me</h2>
 
-      <div className="container contact_container">
+      <div className=" contact_container">
         <div className="contact_options">
           <article className="contact_option">
           <MdOutlineEmail class="inline"/>

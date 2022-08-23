@@ -1,12 +1,12 @@
 import React from "react";
 import "./header.css";
 import CTA from "./CTA";
-import MYPIC from "../../assets/mypic.jpg";
+import MYPIC from "../../assets/daniel__optimzed.jpg";
 import HeaderSocials from "./HeaderSocials";
 
 const Header = () => {
   return (
-    <section id='header'className="container header__container">
+    <section id='header'className=" header__container">
       
       <div className="header_container_div">
         <h5> Hello I'm </h5>
