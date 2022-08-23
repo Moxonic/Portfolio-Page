@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
@@ -143,3 +142,5 @@ object-fit : cover;
 
     *{top:1rem;}
 }
+
+/* scroll-snap-type: x mandatory; */
