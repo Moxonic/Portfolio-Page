@@ -8,21 +8,35 @@
 .container__about{
     position:relative;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .aboutme{
-   width: 100%;
+    width: 100%;
 }
 
+
+.about__technology {
+    /* display: fle; */
+    display: flex;
+    height: 2rem;
+    align-items: center;
+}
 
 .about__text {
     width: 50%;
 }
 .word {
+    display: inline-block;
     position: relative;
-    min-width: 1px;
+    padding-left: 5px;
+    top:0;
+}
+.cont__word--mod{
+    display: inline-block; 
+    /* height: 5em;    
+    min-width:8.8rem; */
 }
 .about__piccont{
     background-color: aquamarine;
@@ -38,4 +52,5 @@
     border-radius: 50%;
     /* top: 50vh; */
 }
+
 

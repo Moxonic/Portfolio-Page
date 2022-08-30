@@ -1,11 +1,14 @@
 import $ from 'jquery'
 
 var words = [
-    "Hi, I am starting my career as a Frontend Developer",
-    "I built this website with HTML, CSS, Javascript and React",
-    "Are you surprised why my introduction is so short...?",
-    "I am just getting started",
-    "Please scroll on ...",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "ReactJS",
+    "jQuery",
+    "Tailwind",
+    "Wordpress",
+    "Git"
 ],
     part,
     i = 0,
@@ -14,7 +17,7 @@ var words = [
     forwards = true,
     skip_count = 0,
     skip_delay = 35,
-    speed = 70;
+    speed = 50;
 var wordflick = function () {
     setInterval(function () {
         if (forwards) {
