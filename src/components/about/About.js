@@ -5,9 +5,9 @@ var words = [
     "CSS",
     "JavaScript",
     "ReactJS",
-    "jQuery",
+    "canvas-sketch",
     "Tailwind",
-    "Wordpress",
+    "jQuery",
     "Git"
 ],
     part,
@@ -50,6 +50,6 @@ var wordflick = function () {
     }, speed);
 };
 
-$(document).ready(function () {
+$(document).ready(function () {                 //wait until document is loaded the start running stuff
     wordflick();
 });

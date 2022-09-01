@@ -3,23 +3,27 @@ import Header from './components/header/Header'
 import Nav from './components/nav/Nav.jsx'
 import About from './components/about/About.jsx'
 import Experience from './components/experience/Experience'
-import Service from './components/service/Service'
 import Contact from './components/contact/Contact'
+import BackgroundParticles from './components/bg-design/BackgroundParticles'
+
+
 
 const App = () => {
+  
+
   return (
     <>
-    <div className="container">
-      <Nav />
-      <Header />
-      <About />
-      <Experience />
-      <Service />
-      <Contact/>
-    </div>
+      <div className="container">
+        <BackgroundParticles  />
+        <Nav />
+        <Header />
+        <About />
+        <Experience />
+        <Contact />
+      </div>
 
-    
-  </>
+
+    </>
   )
 }
 

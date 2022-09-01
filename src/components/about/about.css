@@ -1,8 +1,10 @@
 #about{
     position:relative;
-
     scroll-snap-align: start;
-
+    /* display: flex;
+    align-items: center; */
+    min-height: 100vh;
+    
 }
 
 .container__about{
@@ -10,6 +12,9 @@
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
+    top: 50vh;
+    transform: translate(0%, -50%);
+    
 }
 
 .aboutme{

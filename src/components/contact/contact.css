@@ -1,0 +1,30 @@
+#contact{
+    position:relative;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    top:15rem;
+}
+
+.contactSymbol{
+    height: 2rem;
+    width: 2rem;
+    margin:8px;
+}
+
+.symboltext{
+    padding:5px;
+}
+.contact_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact_option{
+    padding:1rem;
+    width:15rem;
+}

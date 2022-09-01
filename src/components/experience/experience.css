@@ -1,9 +1,11 @@
 #experience {
     scroll-snap-align: start;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
+    height: auto;
+    /* display: flex;
+    flex-wrap: wrap; */
+    position: relative;
+    top: 25vh;
+    /* justify-content: left; */
 }
 
 .videoWrapper {
@@ -12,6 +14,7 @@
     /* 16:9 */
     height: 0;
     box-sizing: border-box;
+    top:3rem;
 }
 
 .videoWrapper iframe {
@@ -27,9 +30,22 @@
     text-align: justify;
 }
 
-
-
 .videoContainer{
-    padding: 0.5rem;
-    margin: 2rem 0rem;
+    /* height-max: 80vh; */
+    padding: 1.5rem;
+    margin: 5rem 0rem;
+    /* From https://css.glass */
+    background: rgba(0, 247, 255, 0.11);
+    border-radius: 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(0, 247, 255, 0.4);
+    box-shadow:
+    0 0 60px 3px rgb(0, 0, 0),
+    0 0 100px 6px rgba(65, 0, 65, 0.2),
+    0 0 140px 9px rgba(3, 58, 58, 0.2);
+}
+
+.experience__description{
+    padding: 1.5rem;
 }

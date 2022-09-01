@@ -3,21 +3,22 @@ import "./About";
 import "./about.css";
 import FREEDSD from "../../assets/Danielfree22.png";
 import "./About.js";
+import Testimonials from './../testimonials/Testimonials';
 
 const About = () => {
+
   return (
     <section id="about">
       <div className=" container__about">
         
-
         <div className="about__text text t">
         <h1 className="aboutme">Intro</h1>
           <p>
-            I am willing and open to make new connections.<br></br>
-            This means that I am commited to learn Norwegian, getting to know new people and
-            learning something new about coding and programming every day to become faster
-            and more efficient...
+            I am looking forward to make new connections.<br></br>
+            Meaning that I am commited to learn a new language, getting to know new people and to
+            learn coding technologies to become a better and more efficient developer. lorem25 
           </p>
+          
           <br></br>
 
           <div className="about__technology">
