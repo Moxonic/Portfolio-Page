@@ -31,13 +31,13 @@ const Experience = () => {
 						></iframe>
 					</div>
 					<div className="experience__description">
-						<h3>Eye to Ear - IPad App</h3>
+						<h3>Eye to Ear - iPad App</h3>
 						<p>
 							Eye to Ear facilitates visually impaired museum visitors to
 							experience visual art through an interactive sonification
 							approach 
 						</p>
-						<p>Responsibility: </p>
+						<p>Occupation: </p>
 						<p className="pl-5">Sound Art Direction & Sound Design</p>
 						<p>Awards: </p>
 						<p className="pl-5">
@@ -69,7 +69,7 @@ const Experience = () => {
 							state-of-the-art car museum with interactive gesturebased
 							encyclopedia
 						</p>
-						<p>Responsibility: </p>
+						<p>Occupation: </p>
 						<p className="pl-5">Sound Design</p>
 						<p>Awards:</p> 
 						<p className="pl-5">Red Dot Award Communicationdesign</p>
@@ -93,7 +93,7 @@ const Experience = () => {
 							rooms with informational multimedia installations created with Idee und Klang Studios treating topics like energy,
 							water, internet security and climate change
 						</p>
-						<p> Responsibility:</p>
+						<p> Occupation:</p>
 						<p className="pl-5"> Sound Design, Procurement, Technical Installation</p>
 					</div>
 				</div>
@@ -118,7 +118,7 @@ const Experience = () => {
 						<p>
 							In 2020 Attraktion! redesigned and upgraded the attraction park the Blue Cube at the Danfoss Universe Science Park in Denmark
 						</p>
-						<p>Responsibility: </p>
+						<p>Occupation: </p>
 						<p className="pl-5">project management</p>
 						<p>Awards: </p>
 						<p className="pl-5">Global Creative Technology Design Award</p>
@@ -157,9 +157,9 @@ const Experience = () => {
 						<h3>Attraktion! Showcase 2019/20</h3>
 						<p> 
 						Attraktion! creates exceptional media-based experience products such as service robots,
-						dome attractions, interactive games and exhibits etc.
+						dome attractions, interactive games and exhibits 
 						</p>
-						<p>Responsibility:</p>
+						<p>Occupation:</p>
 						<p className="pl-5"> Project Management at Attraktion! for the displayed projects </p>
 					</div>
 				</div>
