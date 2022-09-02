@@ -4,48 +4,54 @@
     /* display: flex;
     flex-wrap: wrap; */
     position: relative;
-    top: 25vh;
+    /* top: 75vh; */
     /* justify-content: left; */
+}
+
+.videoContainer{
+    display: flex;
+    justify-content: space-evenly;
+    
+    padding: .5rem;
+    margin: 5rem 0rem;
+    background: rgba(0, 247, 255, 0.11);
+    border: 1px solid rgba(0, 247, 255, 0.4);
+    backdrop-filter: blur(4px);
+
+}
+
+.videoContainer:nth-child(even) {
+    flex-direction: row-reverse;
 }
 
 .videoWrapper {
     position: relative;
-    padding-bottom: 56.25%;
     /* 16:9 */
-    height: 0;
+    padding-bottom: 37.25%;
+    width:100%;
+    height: auto;
     box-sizing: border-box;
-    top:3rem;
 }
+
 
 .videoWrapper iframe {
-    position: absolute;
-    top: -3rem;
+    position:absolute;
     left: 0;
-    width: 100%;
+    top: 0;
     height: 100%;
-}
-
-.legend {
-    /* padding-top: 5%; */
-    text-align: justify;
-}
-
-.videoContainer{
-    /* height-max: 80vh; */
-    padding: 1.5rem;
-    margin: 5rem 0rem;
-    /* From https://css.glass */
-    background: rgba(0, 247, 255, 0.11);
-    border-radius: 16px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(6.8px);
-    border: 1px solid rgba(0, 247, 255, 0.4);
-    box-shadow:
-    0 0 60px 3px rgb(0, 0, 0),
-    0 0 100px 6px rgba(65, 0, 65, 0.2),
-    0 0 140px 9px rgba(3, 58, 58, 0.2);
+    width: 100%;
 }
 
 .experience__description{
-    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:3rem;
+}
+.experience__description > *{
+    
+    width: 30rem; 
+    padding: 0.5rem ;
+    text-align: justify;
+    /* background-color: aqua; */
 }

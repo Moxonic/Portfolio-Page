@@ -4,140 +4,164 @@ import "./experience.css";
 const Experience = () => {
 	return (
 		<section id="experience">
-			
 			{/* empty Space */}
 			{/* <div className= "h-80"></div> */}
 			{/* header */}
-			<div className= 'h-screen grid grid-cols-1 content-center'>
-				<h1 className="w-full text-center">Experience</h1>
+			<div className="h-screen grid grid-cols-1 content-center">
+				<h1 className=" text-center">Experience</h1>
 				<p className="legend text-center">
-					In the following I present you some of the projects I worked on in the last years. 
-					<br></br>
-					Lean back and enjoy!
+					In the following I present you some of the projects I worked on in the
+					last years.
 				</p>
-			</div>
-		
-
-			{/* video 1 */}
-			<div className="videoContainer w-full rounded-md">	
-				<div className="videoWrapper">
-					<iframe
-						// className="w-full"
-						src="https://www.youtube.com/embed/6ApGMwgCt_w"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>	
-				<div className="experience__description">
-					<h2 >
-						Eye to Ear - IPad App
-					</h2>
-					<p>
-						concept creation and musical composition
-						<br></br>
-						Eye to Ear allows visually impaired museum
-						visitors to experience art through an interactive sonification
-						approach.
-					</p>
-					<p>
-						Awards: Art Directors Club of Europe (Gold- ‘European student of the
-						Year’), Red Dot Award 2017 (Winner in category ‘Junior Award’),
-						Creative Club Austria (Gold in category ‘Student of the Year’),
-						Deutscher Designer Club (Gold in category ‘Zukunft’), IIIDAward 2017
-						(Gold in category ‘Student Work), Digital Business Trend Award 2016
-						(Winner in category ‘Revolution’), Austrian Inclusion Award (Honory
-						Mention)
-					</p>
-				</div>	
-			</div>		
-
-			<div className="videoContainer drop-shadow-lg rounded-md">		
-				<div className="videoWrapper">
-					<iframe
-						className="vidiv"
-						title="vimeo-player"
-						src="https://player.vimeo.com/video/127020709?h=b8366ff9e9"
-						frameborder="0"
-						allowfullscreen
-					></iframe>
-				</div>
-				<div className="experience__description">
-					<h2 className="">Mobiglobe - gesturebased encyclopedia</h2>
-					<p>
-						immersive sound design and surround sound composition
-					</p>
-					<p>
-						Located adjacent to the Volkswagen headquarters in Wolfsburg, Germany the Autostadt serves as a communication platform.
-						It has a state-of-the-art car museum with interactive gesturebased encyclopedia.
-					</p>
-					<p>Awards: Red Dot Award Communicationdesign</p>
-				</div>
+				<h5 className="p-9 text-center">Lean back and enjoy!</h5>
 			</div>
 
-			<div className="videoContainer w-full rounded-md">					
-				<div className="videoWrapper">
-					<iframe
-						className="vidiv"
-						title="vimeo-player"
-						src="https://player.vimeo.com/video/126129405?h=dbfddfd934"
-						frameborder="0"
-						allowfullscreen
-					></iframe>
+			<div className="allvids">
+				<div className="videoContainer  rounded-md ">
+					<div className="videoWrapper">
+						<iframe
+							frameborder="0"
+							scrolling="no"
+							marginheight="0"
+							marginwidth="0"
+							width="788.54"
+							height="443"
+							type="text/html"
+							src="https://www.youtube.com/embed/6ApGMwgCt_w?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
+						></iframe>
+					</div>
+					<div className="experience__description">
+						<h3>Eye to Ear - IPad App</h3>
+						<p>
+							Eye to Ear facilitates visually impaired museum visitors to
+							experience visual art through an interactive sonification
+							approach 
+						</p>
+						<p>Responsibility: </p>
+						<p className="pl-5">Sound Art Direction & Sound Design</p>
+						<p>Awards: </p>
+						<p className="pl-5">
+							Art Directors Club of Europe <br></br>
+							Red Dot Junior Award 2017<br></br>
+							Creative Club Austria (Gold)<br></br>
+							Deutscher Designer Club<br></br>
+							IIIDAward 2017 <br></br>
+							Digital Business Trend Award 2016<br></br>
+							Austrian Inclusion Award (Honory Mention)
+						</p>
+					</div>
 				</div>
-				<div className="experience__description">			
-					<h2 className="">Sasso San Gottardo - multimedia museum</h2>
-					<p>
-						project management, sound design, installation
-						<br></br>
-						Deep inside the swiss alps hides the once top secret Gotthard fortress. 
-						Since 2012 it is open for the public and displays 7 rooms with multimedia installations treating topics like energy, water, internet security and climate change.
-					</p>
-				</div>
-			</div>
 
-			<div className="videoContainer w-full rounded-md">
-				<div className="videoWrapper">
-					<iframe
-						className="vidiv"
-						src="https://www.youtube.com/embed/IbSHel9CRT0"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
+				<div className="videoContainer  rounded-md ">
+					<div className="videoWrapper ">
+						<iframe
+							title="vimeo-player"
+							src="https://player.vimeo.com/video/127020709?h=b8366ff9e9"
+							frameborder="0"
+							allowfullscreen
+						></iframe>
+					</div>
+					<div className="experience__description">
+						<h3>Mobiglobe</h3>
+						<p>
+							Located adjacent to the Volkswagen headquarters in Wolfsburg,
+							Germany the Autostadt serves as a communication platform. It has a
+							state-of-the-art car museum with interactive gesturebased
+							encyclopedia
+						</p>
+						<p>Responsibility: </p>
+						<p className="pl-5">Sound Design</p>
+						<p>Awards:</p> 
+						<p className="pl-5">Red Dot Award Communicationdesign</p>
+					</div>
 				</div>
-				<div className="experience__description">		
-					<h2 className="">Blue Cube 2.0 - multimedia attraction park at Universe Science Park in Denmark</h2>
-					<p>
-						project management
-						<br></br>
-						In 2020 Attraktion! redesigned and upgraded all immersive experiences in the Blue Cube at Universe Science Park, 
-						which represents the branded theme park from Danfoss at their headquarters in Denmark.
-						<br></br>
-						<p>Awards: Global Creative Technology Design Award</p>
-					</p>
-				</div>	
-			</div>
 
-			<div className="videoContainer w-full object-cover rounded-md">
-				<div className="videoWrapper">
-					<iframe
-						className="vidiv"
-						src="https://www.youtube.com/embed/8eZfYiCGXQc"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
+				<div className="videoContainer  rounded-md ">
+					<div className="videoWrapper">
+						<iframe
+							title="vimeo-player"
+							src="https://player.vimeo.com/video/126129405?h=dbfddfd934"
+							frameborder="0"
+							allowfullscreen
+						></iframe>
+					</div>
+					<div className="experience__description">
+						<h3 className="">Sasso San Gottardo</h3>
+						<p>
+							Deep inside the swiss alps hides the once top secret Gotthard
+							fortress. Since 2012 it is open for the public and displays 7
+							rooms with informational multimedia installations created with Idee und Klang Studios treating topics like energy,
+							water, internet security and climate change
+						</p>
+						<p> Responsibility:</p>
+						<p className="pl-5"> Sound Design, Procurement, Technical Installation</p>
+					</div>
 				</div>
-				<div className="experience__description">
-					<h2 className="">Attraktion! Showcase </h2>
-					<p>
-						project management, customer relations, procurement, service,... 
-						<br></br>
-					</p>
+
+				<div className="videoContainer  rounded-md ">
+					<div className="videoWrapper">
+						<iframe
+							frameborder="0"
+							scrolling="no"
+							marginheight="0"
+							marginwidth="0"
+							width="788.54"
+							height="443"
+							type="text/html"
+							src="https://www.youtube.com/embed/IbSHel9CRT0?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
+						></iframe>
+					</div>
+					<div className="experience__description">
+						<h3>
+							Blue Cube 2.0 
+						</h3>
+						<p>
+							In 2020 Attraktion! redesigned and upgraded the attraction park the Blue Cube at the Danfoss Universe Science Park in Denmark
+						</p>
+						<p>Responsibility: </p>
+						<p className="pl-5">project management</p>
+						<p>Awards: </p>
+						<p className="pl-5">Global Creative Technology Design Award</p>
+					</div>
+				</div>
+
+				<div className="videoContainer  rounded-md ">
+					<div className="videoWrapper">
+						<iframe
+							frameborder="0"
+							scrolling="no"
+							marginheight="0"
+							marginwidth="0"
+							width="788.54"
+							height="443"
+							type="text/html"
+							src="https://www.youtube.com/embed/8eZfYiCGXQc?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
+							allowfullscreen
+						>
+							<div>
+								<small>
+									<a href="https://youtubeembedcode.com/pl/">
+										https://youtubeembedcode.com/pl/
+									</a>
+								</small>
+							</div>
+							<div>
+								<small>
+									<a href="https://bettingsidor-utan-svensk-licens.se/">
+									</a>
+								</small>
+							</div>
+						</iframe>
+					</div>
+					<div className="experience__description">
+						<h3>Attraktion! Showcase 2019/20</h3>
+						<p> 
+						Attraktion! creates exceptional media-based experience products such as service robots,
+						dome attractions, interactive games and exhibits etc.
+						</p>
+						<p>Responsibility:</p>
+						<p className="pl-5"> Project Management at Attraktion! for the displayed projects </p>
+					</div>
 				</div>
 			</div>
 		</section>

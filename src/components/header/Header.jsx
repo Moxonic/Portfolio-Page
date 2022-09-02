@@ -17,12 +17,7 @@ const Header = () => {
           <img className='myPic' src={MYPIC} alt="Daniel looking good">
           </img>
         </div> 
-        
         <CTA /> {/* download and contact buttons */}
-
-        <a href="#contact" className="scroll__down">
-            Scroll Down
-        </a>
       </div>
     </section>
   );
