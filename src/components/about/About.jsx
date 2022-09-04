@@ -3,29 +3,26 @@ import "./About";
 import "./about.css";
 import FREEDSD from "../../assets/Danielfree22.png";
 import "./About.js";
-import Testimonials from './../testimonials/Testimonials';
 
 const About = () => {
 
   return (
-    <section id="about">
-      <div className=" container__about">        
-        <div className="about__text text t">
-        <h1 className="aboutme">Intro</h1>
-          <p>
-            I am looking forward to make new connections.<br></br>
-            Meaning that I am commited to learn a new language, getting to know new people and to
-            learn coding technologies to become a better and more efficient developer.  
-          </p>  
-          <br></br>
-          <div className="about__technology">
-            <p className="inline-block">I built this site using </p>
-            <div className="cont__word--mod ">
-              <div className="word text-sky-400 text-2xl"></div>
-            </div>
+    <section id="about" className='flex'>
+      <div className="flex-col-reverse m-auto xl:flex xl:flex-row-reverse xl:w-2/3  ">        
+        <img className='rounded-full center w-40 h-40 mx-auto xl:w-56 xl:h-56 ' src={FREEDSD} alt="looking nice"></img>
+        <div className="p-5 ">
+          <h1 className="aboutme text-center">Introduction:</h1>
+          <p className="text-justify">
+              I´m a Front End Developer with a creative attitude to technical problem solving and a good sense for design.
+              I have about one year experience and I want to make connections and to expand on to bigger projects.
+          </p>            
+          <div className="w-100 flex">
+              <p className="inline-block pb-12">I built this site using </p>
+              <div className="">
+                <div className="word text-sky-400 text-2xl"></div>
+              </div>
           </div>
         </div>
-        <img className="myPicAbout" src={FREEDSD} alt="powerpose"></img>
       </div>
     </section>
   );

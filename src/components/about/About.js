@@ -5,9 +5,7 @@ var words = [
     "CSS",
     "JavaScript",
     "ReactJS",
-    "canvas-sketch",
     "Tailwind",
-    "jQuery",
     "Git"
 ],
     part,

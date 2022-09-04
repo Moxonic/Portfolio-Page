@@ -3,9 +3,10 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-/* html {
+html {
     scroll-snap-type: y proximity;
-} */
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -20,6 +21,7 @@
 }
 
 :root {
+    
     --color-bg: #1f1f38;
     --color-bg-variant: ##2c2c6c;
     --color-primary: rgb(70 105 193);
@@ -27,16 +29,9 @@
     --color-light: rgba(255, 255, 255, 0.6);
 
     --transition: all 400ms ease;
-
-    --container-width-lg: 75%;
-    --container-width-md: 86%;
-    --container-width-sm: 90%;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-}
+
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -68,6 +63,7 @@ body {
     color: var(--color-white);
     line-height: 1.7;
     background: var(--color-bg);
+    max-width: 100%;
     /* background-image: url(./assets/freeTILE1.png); */
 }
 
@@ -75,9 +71,7 @@ body {
 
 .container {
     /*all Components have these attributes*/
-    width: var(--container-width-lg);
     margin: 0 auto;
-    scroll-snap-type: y mandatory;
     height: inherit;
 }
 
@@ -101,10 +95,12 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+    
 }
 
 h4 {
     font-size: 1.4rem;
+   
 }
 
 h5 {
@@ -164,28 +160,16 @@ img {
 
 /* ==========MEDIA QUERIES MEDIUM DEVICES=========*/
 @media screen and (max-width: 1280px) {         /*before 1020*/
-    .container {
-        width: var(--container-width-md);
-    }
     
-    /* section {
-        margin-top: 6rem;
-    } */
+  
 }
 
 /* ==========MEDIA QUERIES SMALL DEVICES=========*/
 @media screen and (max-width: 600px) {
-    .container {
-        width: var(--container-width-sm);
-    }
-
-    section>h2 {
+    /* section>h2 {
         margin-top: 2rem;
-    }
+    } */
 
-    * {
-        top: 1rem;
-    }
 }
 
 /* scroll-snap-type: x mandatory; */

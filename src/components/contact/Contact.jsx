@@ -8,15 +8,14 @@ import {BsLinkedin} from 'react-icons/bs'
 const Contact = () => {
     return (
         <section id="contact">
-            {/* <div className="contact_container" */}
             <h5>Get in touch</h5>
             <h2> Contact me</h2>
 
-            <div className=" contact_container">
+            <div className=" contact_container flex-col items-center">
                 <div >
-                    <article className="contact_option">
+                    <article className="contact_option justify-center">
                         <a href="mailto:d.soto@gmx.at" 
-                        className="flex">
+                        className="flex ">
                             <MdOutlineEmail class="contactSymbol" />
                             <h4 className='symboltext'>Email</h4>
                         </a>
