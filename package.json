@@ -1,8 +1,8 @@
 {
   "name": "react-danielsite",
   "version": "0.1.0",
-  "homepage":"https://Moxonic.github.io/Portfolio-Page",
-  "private": false,
+  "homepage": "https://Moxonic.github.io/Portfolio-Page",
+  "private": true,
   "dependencies": {
     "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
@@ -18,7 +18,6 @@
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
     "react-material-ui-carousel": "^3.4.2",
-    "react-particles-js": "^3.6.0",
     "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
     "react-sketch-canvas": "^6.2.0",
