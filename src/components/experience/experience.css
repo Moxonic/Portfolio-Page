@@ -1,17 +1,12 @@
 #experience {
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
     height: auto;
-    /* display: flex;
-    flex-wrap: wrap; */
     position: relative;
-    /* top: 75vh; */
-    /* justify-content: left; */
 }
 
 .videoContainer{
     min-height: 50vh;
     margin: 5rem;
-    /* display: flex; */
     justify-content: space-evenly;
     margin: 7rem 0rem;
     background: rgba(0, 247, 255, 0.11);
@@ -25,10 +20,10 @@
 }
 
 
-/* ==========MEDIA QUERIES MEDIUM DEVICES=========*/
-/* @media screen and (max-width: 1280px) {  
-
-}    */
+/* @media screen and (min-width: 1280px) {         after 1020
+    
+  
+} */
 
 
 .videoWrapper {

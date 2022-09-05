@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 html {
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
     scroll-behavior: smooth;
 }
 
@@ -157,19 +157,3 @@ img {
     width: 100%;
     object-fit: cover;
 }
-
-/* ==========MEDIA QUERIES MEDIUM DEVICES=========*/
-@media screen and (max-width: 1280px) {         /*before 1020*/
-    
-  
-}
-
-/* ==========MEDIA QUERIES SMALL DEVICES=========*/
-@media screen and (max-width: 600px) {
-    /* section>h2 {
-        margin-top: 2rem;
-    } */
-
-}
-
-/* scroll-snap-type: x mandatory; */
