@@ -1,7 +1,7 @@
 {
   "name": "react-danielsite",
   "version": "0.1.0",
-  "homepage":"https://moxonic.github.io/portfolio-page"
+  "homepage":"https://moxonic.github.io/portfolio-page",
   "private": false,
   "dependencies": {
     "@mui/icons-material": "^5.10.2",

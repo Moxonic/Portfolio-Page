@@ -32,7 +32,7 @@ const Experience = () => {
 							src="https://www.youtube.com/embed/6ApGMwgCt_w?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
 						></iframe>
 					</div>
-					<div className="experience__description flex-col content-center pb-5 items-center xl:w-96 ">
+					<div className="experience__description flex-col content-center pb-5 items-center xl:w-96 xl:pt-">
 						<h3 className="pt-5">Eye to Ear - iPad App</h3>
 						<p className="text-center">
 							Eye to Ear facilitates visually impaired museum visitors to
