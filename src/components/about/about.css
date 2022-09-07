@@ -1,8 +1,7 @@
 #about{
     position:relative;
     scroll-snap-align: start;
-    /* min-height: 100vh;
-    contain: content; */
+    min-height: 100vh;
     height:auto;
 }
 
