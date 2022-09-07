@@ -10,7 +10,7 @@ const Contact = () => {
     return (
         <section id="contact">
             <h5>Get in touch</h5>
-            <img className='rounded-full center w-40 h-40 mx-auto xl:w-56 xl:h-56 ' src={FREEDSD} alt="looking nice"></img>
+            <img className='rounded-full center w-40 h-40 mx-auto xl:w-56 xl:h-56 p-5' src={FREEDSD} alt="looking nice"></img>
             <h2> Contact me</h2>
 
             <div className=" contact_container flex-col items-center">

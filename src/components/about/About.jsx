@@ -22,7 +22,7 @@ const About = () => {
               Besides the hardware we developed controller software, interactive multimedia games and computer animations I got curious 
               about how the visual realisation was done practically. 
               So I started my Front End journey and found a real passion in bringing design ideas on to the screen.
-              Now I want to expand my practical knowledge to real life projects to make the internet a better experience for everybody.
+              Now I want to expand my practical knowledge to real life projects to make the internet a better experience for everybody from my new homebase in Oslo.
           </p>            
           <div className="w-100 flex">
               <p className="inline-block pb-12">I built this site using </p>
