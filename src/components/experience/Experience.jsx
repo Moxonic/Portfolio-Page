@@ -81,7 +81,7 @@ const Experience = () => {
 						<h4 className="pt-5">Occupation: </h4>
 						<p className="">Sound Design</p>
 						<h4 className="pt-5">Awards: </h4>
-						<p className=" text-center">Red Dot Award Communicationdesign</p>
+						<p className=" text-center pb-14">Red Dot Award Communicationdesign</p>
 					</div>
 				</div>
 
@@ -114,7 +114,7 @@ const Experience = () => {
 							water, internet security and climate change
 						</p>
 						<h4 className="pt-5"> Occupation:</h4>
-						<p className=""> Sound Design, Technical Installation</p>
+						<p className="pb-24"> Sound Design, Technical Installation</p>
 					</div>
 				</div>
 
@@ -152,7 +152,7 @@ const Experience = () => {
 						<h4 className="pt-5">Occupation: </h4>
 						<p className="">Project Management</p>
 						<h4>Awards: </h4>
-						<p className="">Global Creative Technology Design Award</p>
+						<p className="pb-36">Global Creative Technology Design Award</p>
 					</div>
 				</div>
 
@@ -181,13 +181,13 @@ const Experience = () => {
 							allowfullscreen></iframe>
 					</div>
 					<div className="experience__description flex-col content-center pb-5 items-center xl:w-96">
-						<h3 className="pt-5">Attraktion! Showcase 2019/20</h3>
-						<p> 
+						<h3 className="pt-5 ">Attraktion! Showcase 2019/20</h3>
+						<p className="text-justify "> 
 						Attraktion! creates exceptional media-based experience products such as service robots,
 						dome attractions, interactive games and exhibits 
 						</p>
 						<h4 className="pt-5">Occupation:</h4>
-						<p className=""> Project Management </p>
+						<p className="pb-44"> Project Management </p>
 					</div>
 				</div>
 			</div>
