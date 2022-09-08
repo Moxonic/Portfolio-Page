@@ -13,13 +13,13 @@ const Contact = () => {
             <img className='rounded-full center w-40 h-40 mx-auto xl:w-56 xl:h-56 p-5' src={FREEDSD} alt="looking nice"></img>
             <h2> Contact me</h2>
 
-            <div className=" contact_container flex-col items-center">
+            <div className=" contact_container flex-col items-center pl-4">
                 <div >
                     <article className="contact_option justify-center">
                         <a href="mailto:d.soto@gmx.at" 
-                        className="flex ">
+                        className="flex justify-center">
                             <MdOutlineEmail class="contactSymbol" />
-                            <h4 className='symboltext'>Email</h4>
+                            <h4 className='symboltext w-32'>Email</h4>
                         </a>
                     </article>
                 </div>
@@ -27,9 +27,9 @@ const Contact = () => {
                 <div >
                     <article className="contact_option">
                         <a href="https://api.whatsapp.com/?phone+436509513571" target="_blank" rel="noreferrer" 
-                        className="flex">
+                        className="flex justify-center">
                             <BsWhatsapp class="contactSymbol" />
-                            <h4 className='symboltext'>WhatsApp</h4>
+                            <h4 className='symboltext w-32'>WhatsApp</h4>
                         </a>
                     </article>
                 </div>
@@ -37,9 +37,9 @@ const Contact = () => {
                 <div className=''>
                     <article className="contact_option">
                         <a href='https://www.linkedin.com/in/daniel-soto-delgado-21368866/' target='_blank' rel="noreferrer"  
-                        className="flex">
+                        className="flex justify-center">
                             <BsLinkedin className='contactSymbol'/>
-                            <h4  className='symboltext'>LinkedIn</h4>
+                            <h4  className='symboltext w-32'>LinkedIn</h4>
                             </a>
                     </article>
                 </div>

@@ -34,7 +34,7 @@ const Experience = () => {
 					</div>
 					<div className="experience__description flex-col content-center pb-5 items-center xl:w-96 ">
 						<h3 className="pt-5">Eye to Ear - iPad App</h3>
-						<p className="text-center">
+						<p className="text-justify">
 							Eye to Ear facilitates visually impaired museum visitors to
 							experience visual art through an interactive sonification
 							approach 
@@ -72,7 +72,7 @@ const Experience = () => {
 					</div>
 					<div className="experience__description flex-col content-center pb-5 items-center xl:w-96 ">
 						<h3 className="pt-5">Mobiglobe</h3>
-						<p className="text-center">
+						<p className="text-justify">
 							Located adjacent to the Volkswagen headquarters in Wolfsburg,
 							Germany the Autostadt serves as a communication platform. It has a
 							state-of-the-art car museum with an interactive gesturebased
@@ -107,7 +107,7 @@ const Experience = () => {
 					</div>
 					<div className="experience__description flex-col content-center pb-5 items-center xl:w-96">
 						<h3  className="pt-5">Sasso San Gottardo</h3>
-						<p>
+						<p className="text-justify">
 							Deep inside the swiss alps hides the once top secret Gotthard
 							fortress. Since 2012 it is open for the public and displays 7
 							rooms with informational multimedia installations created with Idee und Klang Studios treating topics like energy,
@@ -146,7 +146,7 @@ const Experience = () => {
 						<h3 className="pt-5">
 							Blue Cube 2.0 
 						</h3>
-						<p>
+						<p className="text-justify">
 							In 2020 Attraktion! redesigned and upgraded the attraction park the Blue Cube at the Danfoss Universe Science Park in Denmark
 						</p>
 						<h4 className="pt-5">Occupation: </h4>
