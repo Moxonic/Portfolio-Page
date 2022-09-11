@@ -26,7 +26,7 @@ const Contact = () => {
 
                 <div >
                     <article className="contact_option">
-                        <a href="https://api.whatsapp.com/?phone436509513571" target="_blank" rel="noreferrer" 
+                        <a href="https://wa.me/436509513571?text=urlencodedtext" target="_blank" rel="noreferrer" 
                         className="flex justify-center">
                             <BsWhatsapp class="contactSymbol" />
                             <h4 className='symboltext w-32'>WhatsApp</h4>
