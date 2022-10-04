@@ -9,21 +9,14 @@
     margin: 5rem;
     justify-content: space-evenly;
     margin: 7rem 0rem;
-    background: rgba(0, 247, 255, 0.11);
-    border: 1px solid rgba(0, 247, 255, 0.4);
+    background: rgba(0, 247, 255, 0.057);
+    border: 2px solid rgba(0, 183, 255, 0.607);
     backdrop-filter: blur(2px);
 }
 
 .videoContainer:nth-child(even) {
     flex-direction: row-reverse;
 }
-
-
-/* @media screen and (min-width: 1280px) {         after 1020
-    
-  
-} */
-
 
 .videoWrapper {
     position: relative;
@@ -34,7 +27,6 @@
     /* box-sizing: border-box; */
     top:50%;
 }
-
 
 .videoWrapper iframe {
     position:absolute;
