@@ -19,7 +19,8 @@ const Experience = () => {
 				p-2 mx-3 my-9 flex-col rounded-md 
 				xl:flex xl:flex-row xl:m-28
 				xl:pb-5 xl:items-baseline 
-				xl:justify-evenly">
+				xl:justify-evenly
+				">
 					<div className="videoWrapper  
 					xl:flex-row xl:pb-0  xl:w-1/2
 					">
@@ -81,7 +82,7 @@ const Experience = () => {
 						<h4 className="pt-5">Occupation: </h4>
 						<p className="">Sound Design</p>
 						<h4 className="pt-5">Awards: </h4>
-						<p className=" text-center pb-14">Red Dot Award Communicationdesign</p>
+						<p className=" text-center xl:pb-14">Red Dot Award Communicationdesign</p>
 					</div>
 				</div>
 
@@ -114,7 +115,7 @@ const Experience = () => {
 							water, internet security and climate change
 						</p>
 						<h4 className="pt-5"> Occupation:</h4>
-						<p className="pb-24"> Sound Design, Technical Installation</p>
+						<p className="xl:pb-24"> Sound Design, Technical Installation</p>
 					</div>
 				</div>
 
@@ -152,7 +153,7 @@ const Experience = () => {
 						<h4 className="pt-5">Occupation: </h4>
 						<p className="">Project Management</p>
 						<h4>Awards: </h4>
-						<p className="pb-36">Global Creative Technology Design Award</p>
+						<p className="xl:pb-36">Global Creative Technology Design Award</p>
 					</div>
 				</div>
 
@@ -187,7 +188,7 @@ const Experience = () => {
 						dome attractions, interactive games and exhibits 
 						</p>
 						<h4 className="pt-5">Occupation:</h4>
-						<p className="pb-44"> Project Management </p>
+						<p className="xl:pb-44"> Project Management </p>
 					</div>
 				</div>
 			</div>
