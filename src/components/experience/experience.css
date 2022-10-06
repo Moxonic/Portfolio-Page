@@ -5,11 +5,11 @@
 }
 
 .videoContainer{
-    min-height: 50vh;
+    min-height: 400px;
     margin: 5rem;
     justify-content: space-evenly;
     margin: 7rem 0rem;
-    background: rgba(0, 247, 255, 0.057);
+    background: rgba(0, 255, 166, 0.155);
     border: 2px solid rgba(0, 183, 255, 0.607);
     backdrop-filter: blur(2px);
 }
@@ -17,8 +17,12 @@
 .videoContainer:nth-child(even) {
     flex-direction: row-reverse;
 }
-
+.wrapperwrapper{
+    position:relative;
+    width:
+}
 .videoWrapper {
+    overflow:hidden;
     position: relative;
     /* 16:9 */
     padding-bottom: 56.25%;
@@ -32,8 +36,8 @@
     position:absolute;
     left: 0;
     top: 0;
-    /* height: 100%;
-    width: 100%; */
+    height: 100%;
+    width: 100%;
 }
 
 .experience__description{
