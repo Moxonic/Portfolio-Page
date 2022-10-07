@@ -6,11 +6,7 @@ import Experience from './components/experience/Experience'
 import Contact from './components/contact/Contact'
 import BackgroundParticles from './components/bg-design/BackgroundParticles'
 
-
-
 const App = () => {
-  
-
   return (
     <>
       <div className="container">
@@ -21,8 +17,6 @@ const App = () => {
         <Experience />
         <Contact />
       </div>
-
-
     </>
   )
 }

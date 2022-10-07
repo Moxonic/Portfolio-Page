@@ -27,7 +27,7 @@ const Experience = () => {
 						">
 							<iframe
 								className="h-full w-full xl:h-96 "
-								frameborder="0"
+								frameBorder="0"
 								scrolling="no"
 								allow="fullscreen;"
 								type="text/html"
@@ -71,7 +71,7 @@ const Experience = () => {
 								className="h-full w-full xl:h-96 "
 								title="vimeo-player"
 								src="https://player.vimeo.com/video/127020709?h=b8366ff9e9"
-								frameborder="0"
+								frameBorder="0"
 								allow="fullscreen;"></iframe>
 						</div>
 					</div>
@@ -107,7 +107,7 @@ const Experience = () => {
 								className='h-full w-full xl:h-96 '
 								title="vimeo-player"
 								src="https://player.vimeo.com/video/126129405?h=dbfddfd934"
-								frameborder="0"
+								frameBorder="0"
 								allow="fullscreen;"
 							></iframe>
 						</div>
@@ -139,11 +139,11 @@ const Experience = () => {
 						">
 							<iframe
 								className='h-full w-full xl:h-96 '
-								frameborder="0"
+								frameBorder="0"
 								allow="fullscreen;"
 								scrolling="no"
-								marginheight="0"
-								marginwidth="0"
+								marginHeight="0"
+								marginWidth="0"
 								width="788.54"
 								height="443"
 								type="text/html"
@@ -179,16 +179,16 @@ const Experience = () => {
 						">
 							<iframe
 								className='h-full w-full xl:h-96 '
-								frameborder="0"
+								frameBorder="0"
 								allow="fullscreen;"
 								scrolling="no"
-								marginheight="0"
-								marginwidth="0"
+								marginHeight="0"
+								marginWidth="0"
 								width="788.54"
 								height="443"
 								type="text/html"
 								src="https://www.youtube.com/embed/8eZfYiCGXQc?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
-								allowfullscreen></iframe>
+								allowFullScreen></iframe>
 						</div>
 					</div>
 					<div className="experience__description flex-col content-center pb-5 items-center xl:w-96">
