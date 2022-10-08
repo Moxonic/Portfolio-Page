@@ -8,7 +8,7 @@ const Experience = () => {
 		<section id="experience">
 			<div className="h-screen grid grid-cols-1 content-center">
 				<h1 className=" text-center">Experience</h1>
-				<AnimationOnScroll animateIn="animate__fadeIn" animateOnce="true">
+				<AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
 					<p className="legend text-center p-9">
 						In the following you will find some of the projects I worked on in the
 						last years.
@@ -16,12 +16,12 @@ const Experience = () => {
 					<h5 className="p-9 text-center">Lean back and enjoy!</h5>
 				</AnimationOnScroll>
 			</div>
-			<AnimationOnScroll animateIn="animate__slideInLeft" animateOnce="true">
+			<AnimationOnScroll animateIn="animate__slideInUp" duration="2" animateOnce="true">
 			<div className="allvids">
 					<div className="
 					videoContainer
 					p-2 mx-3 my-9 flex-col rounded-md 
-					xl:flex xl:flex-row xl:m- xl:items-center 
+					xl:flex xl:flex-row xl:m-20 xl:items-center 
 					xl:justify-evenly
 					">
 						<div className="wrapperwrapper xl:w-3/4 ">
@@ -63,7 +63,7 @@ const Experience = () => {
 					<div className="
 					videoContainer
 					p-2 mx-3 my-9 flex-col rounded-md 
-					xl:flex xl:flex-row xl:m- xl:items-center 
+					xl:flex xl:flex-row xl:m-20 xl:items-center 
 					xl:justify-evenly
 					">
 						<div className="wrapperwrapper xl:w-3/4">
@@ -96,7 +96,7 @@ const Experience = () => {
 					<div className="
 					videoContainer
 					p-2 mx-3 my-9 flex-col rounded-md 
-					xl:flex xl:flex-row xl:m- xl:items-center 
+					xl:flex xl:flex-row xl:m-20 xl:items-center 
 					xl:justify-evenly
 					">
 						
@@ -130,7 +130,7 @@ const Experience = () => {
 					<div className="
 					videoContainer
 					p-2 mx-3 my-9 flex-col rounded-md 
-					xl:flex xl:flex-row xl:m- xl:items-center 
+					xl:flex xl:flex-row xl:m-20 xl:items-center 
 					xl:justify-evenly
 					">
 						
@@ -170,7 +170,7 @@ const Experience = () => {
 					<div className="
 					videoContainer
 					p-2 mx-3 my-9 flex-col rounded-md 
-					xl:flex xl:flex-row xl:m- xl:items-center 
+					xl:flex xl:flex-row xl:m-20 xl:items-center 
 					xl:justify-evenly
 					">
 						
