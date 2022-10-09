@@ -3,7 +3,6 @@ import "./About";
 import "./about.css";
 // import FREEDSD from "../../assets/Danielfree22.png";
 import "./About.js";
-
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const About = () => {
@@ -12,10 +11,10 @@ const About = () => {
     <section id="about" className='flex'>
       <div className="flex-col-reverse m-auto xl:flex xl:flex-row-reverse xl:w-2/3">        
         <div className="p-5">
-          <AnimationOnScroll animateIn="animate__fadeInUpBig" duration="2" animateOnce="true">
+          <AnimationOnScroll animateIn="animate__fadeIn" duration="2" animateOnce="true">
             <h1 className="aboutme text-center pb-4">About me:</h1>
           </AnimationOnScroll>
-          <AnimationOnScroll animateIn="animate__fadeInUpBig" duration="2" animateOnce="true">
+          <AnimationOnScroll animateIn="animate__fadeIn" duration="2" delay="1" animateOnce="true">
             <p className='pb-4'>
                 I started working as a sound engineer in my early twenties.
                 Through mixing, recording and composing music I learned 

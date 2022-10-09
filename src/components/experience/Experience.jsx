@@ -7,8 +7,10 @@ const Experience = () => {
 	return (
 		<section id="experience">
 			<div className="h-screen grid grid-cols-1 content-center">
-				<h1 className=" text-center">Experience</h1>
-				<AnimationOnScroll animateIn="animate__fadeIn" duration="2" >
+				<AnimationOnScroll animateIn="animate__fadeIn" duration="2" delay="1" >
+					<h1 className=" text-center">Experience</h1>
+				</AnimationOnScroll>
+				<AnimationOnScroll animateIn="animate__fadeIn" duration="2" delay="1" >
 					<p className="legend text-center p-9">
 						In the following you will find some of the projects I worked on in the
 						last years.
@@ -16,7 +18,7 @@ const Experience = () => {
 					<h5 className="p-9 text-center">Lean back and enjoy!</h5>
 				</AnimationOnScroll>
 			</div>
-			<AnimationOnScroll animateIn="animate__slideInUp" duration="2" animateOnce="true">
+			<AnimationOnScroll animateIn="animate__fadeIn" duration="2" animateOnce="true">
 			<div className="allvids">
 					<div className="
 					videoContainer
