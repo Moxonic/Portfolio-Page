@@ -42,9 +42,10 @@ const About = () => {
                   </div>
               </div>
             </AnimationOnScroll>  
-        </div>
             <img className='wifiLogo' src={WIFILOGO}></img>
-      </div>
+        </div>
+           
+      </div> 
     </section>
   );
 };
