@@ -4,6 +4,8 @@ import "./about.css";
 // import FREEDSD from "../../assets/Danielfree22.png";
 import "./About.js";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import WIFILOGO from '../../assets/Wirtschaftsförderungsinstitut_logo.svg.png';
+
 
 const About = () => {
 
@@ -19,19 +21,19 @@ const About = () => {
                 I started working as a sound engineer in my early twenties.
                 Through mixing, recording and composing music I learned 
                 not to give up easily when faced with technical challenges and to communicate effectively.
-                When working as a sound operator on a cruise ship through Norway 
-                I fell in love with the natural beauty of the country, 
-                but decided to go back to Austria to take a position as a project manager 
+                I worked on many projects for the Vienna State Opera, Red Bulls Servus TV and advertisement agencies. 
+                After a job as sound operations manager on an Aida cruise ship I decided to return to Austria as I was offered a position as a project manager 
                 for amusement park attractions.
             </p>
             <p className='pb-4'>
-                I was responsible for planning, scheduling and execution of a whole portfolio of innovative multimedia attractions.
-                Besides the hardware we developed controller software, interactive multimedia games and computer animations I got curious 
-                about how the visual realisation was done practically. 
+                After getting a  practical project management certificate I became responsible 
+                for planning, scheduling and the execution of a broad portfolio of innovative multimedia installations with Attraktion GmbH.
+                Besides planning and building hardware constructions with hydraulics and pneumatics, we developed controller software, interactive multimedia games and computer animations.
+                Working with specialists from different IT fields I wanted to gain a better understanding of programming. 
             </p>
             <p className='pb-4'>
-                So I started my Front End journey and found a real passion in bringing design ideas on to the screen.
-                Now I want to expand my practical knowledge to real life projects to make the internet a better experience for everybody from my new homebase in Oslo.
+                So I started my own developer journey with freecodecamp and udemy courses and found a real passion in sharing knowledge and code with others during a Fullstack Develpment Wificourse.
+                I love to learn, communicate and code and want to expand my knowledge in real life projects to raise connectivity and improve online experiences.
             </p>         
               <div className="w-100 flex">
                   <p className="inline-block pb-12">I built this site using </p>
@@ -41,6 +43,7 @@ const About = () => {
               </div>
             </AnimationOnScroll>  
         </div>
+            <img className='wifiLogo' src={WIFILOGO}></img>
       </div>
     </section>
   );
