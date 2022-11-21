@@ -42,9 +42,15 @@
     border-radius: 50%;
 }
 
+.logos{
+    display: flex;
+}
 .wifiLogo{
     width: 4rem;
-    
-    margin: auto;
+   /*  margin: auto; */
+}
+.udemyLogo{
+    width: 8rem;
+  /*   margin: auto; */
 }
 
