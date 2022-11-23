@@ -5,6 +5,7 @@ import About from './components/about/About.jsx'
 import Experience from './components/experience/Experience'
 import Contact from './components/contact/Contact'
 import BackgroundParticles from './components/bg-design/BackgroundParticles'
+import "animate.css/animate.min.css";
 
 const App = () => {
   return (
