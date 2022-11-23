@@ -66,13 +66,13 @@ body {
     color: var(--color-white);
     line-height: 1.7;
     max-width: 100%;
-    background: linear-gradient(132deg, #0b2a78, #1f398f, #41079f, #0c2687, #073980, #12318c, #045d54, #0a3c75, #281c83);
+    background: linear-gradient(132deg, #0b2a78, #1f398f, #41079f, #10246a, #073980, #12318c, #004740, #0a3c75, #281c83);
     background-size: 2000% 2000%;
 
-    -webkit-animation: ColorgradientAnimation1 45s ease infinite;
-    -moz-animation: ColorgradientAnimation1 45s ease infinite;
-    -o-animation: ColorgradientAnimation1 75s ease infinite;
-    animation: ColorgradientAnimation1 55s ease infinite;
+    -webkit-animation: ColorgradientAnimation1 185s ease infinite;
+    -moz-animation: ColorgradientAnimation1 185s ease infinite;
+    -o-animation: ColorgradientAnimation1 185s ease infinite;
+    animation: ColorgradientAnimation1 185s ease infinite;
 }
 @-webkit-keyframes ColorgradientAnimation1 {
     0%{background-position:10% 0%}
