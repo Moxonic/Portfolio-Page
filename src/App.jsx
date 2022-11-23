@@ -7,11 +7,7 @@ import Contact from './components/contact/Contact'
 import BackgroundParticles from './components/bg-design/BackgroundParticles'
 import "animate.css/animate.min.css";
 
-
-
 const App = () => {
-  
-
   return (
     <>
       <div className="container">
@@ -22,8 +18,6 @@ const App = () => {
         <Experience />
         <Contact />
       </div>
-
-
     </>
   )
 }

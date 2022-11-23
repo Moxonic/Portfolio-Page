@@ -3,6 +3,7 @@ import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import {BsLinkedin} from 'react-icons/bs'
+import {BsGithub} from 'react-icons/bs'
 import FREEDSD from "../../assets/Danielfree22.png";
 
 
@@ -41,6 +42,16 @@ const Contact = () => {
                             <BsLinkedin className='contactSymbol'/>
                             <h4  className='symboltext w-32'>LinkedIn</h4>
                             </a>
+                    </article>
+                </div>
+
+                <div>
+                    <article className="contact_option">
+                        <a href="https://github.com/Moxonic" target="_blank" rel="noreferrer" 
+                        className="flex justify-center">
+                            <BsGithub class="contactSymbol" />
+                            <h4 className='symboltext w-32'>Github</h4>
+                        </a>
                     </article>
                 </div>
 
