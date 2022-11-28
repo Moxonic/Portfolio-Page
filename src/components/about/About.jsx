@@ -19,38 +19,40 @@ const About = () => {
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" delay="1" animateOnce="true">
             <p className='pb-4'>
-                I started working as a sound engineer in my early twenties.
-                Through mixing, recording and composing music I learned 
-                not to give up when faced with technical difficulties and to communicate effectively.
-                Over the years I have worked on for television-, radio-, opera-, museum-, theater- and advertisement-productions. 
-                After a three month contract managing sound operations on an Aida cruise ship I 
-                returned to Austria after being offered a position as a project manager for multimedia amusement park attractions.
+               {/*  I am a problem solver but I am also a listener. */}
+                I am a project manager, frontend developer and multimedia technician based in Oslo.
+                <br></br>
+                Having worked many years as a sound engineer I am solution oriented
+                when dealing with technical challenges and quick to adapt to changes.
             </p>
             <p className='pb-4'>
-                I got made a project management certificate and took responsibility 
-                for a portfolio of innovative multimedia installations with Attraktion! GmbH.
-                Besides planning and developing hardware constructions with hydraulics and pneumatics, we developed 
-                controller software, interactive multimedia games and computer animated films.
-                Working with IT specialists, I noticed how limited my understanding was. 
+                I have a BFI project management certificate and experience managing 
+                innovative multimedia installations with Attraktion! GmbH.
             </p>
-            <p className=''>
-                In spring 2020 the entertainment industry came to a sudden halt so that I decided to take the opportunity to learn
-                something new and start programming. 
-                I did a udemy course and s "Fullstack Development" training  at Wifi in Vienna.
+            <p className='pb-4'>
+                As a project manager I define objectives and break them down into 
+                smaller project tasks that can be planned and tracked.
+                When working with people I like listening to their opinions and ideas.
+                I value openness and honesty. 
+            </p>
+            <p className='pb-4'>  
+                I find purpose in taking responsibility when I am faced with problems 
+                and find joy when I can contribute to improvements.
+                </p>
+            <p className='pb-4'>
+                I am passionate about learning new web technologies, organizational frameworks
+                as well as improving my own communication skills.   
+            </p>
+      
+            <p className='pb-4'>
+                During the corona lockdown I discovered my passion for deb development with udemy and wifi courses
+                and enjoy working on my own project ideas. 
             </p> 
             <div className="logos p-4 justify-center"> 
               <img className='wifiLogo m-5 ' src={WIFILOGO}></img>
               <img className='udemyLogo m-5' src={UDEMYLOGO}></img>
             </div> 
-            <p>
-                I am passionate about sharing knowledge and learning while solving problems  
-                on challenging projects. 
-                <br></br>
-                In August 2022 my girlfriend got a job as a soprano in the opera of Oslo and
-                I decided to quit my job in the opera and to dare a fresh start with her in Oslo.
-
-
-            </p>         
+                
               <div className="w-100 flex">
                   <p className="inline-block pb-12">I built this site using </p>
                   <div className="">

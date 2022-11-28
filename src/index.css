@@ -37,19 +37,19 @@ html {
 
 
 ::-webkit-scrollbar {
-    width: 12px;
-	background-color: #f5f5f51e;
+    width: 8px;
+	background-color: #41079f;
 }
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #f5f5f519;
+	border-radius: 5px;
+	background-color: #e6e6e619;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 5px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: rgb(0, 145, 255);
     box-shadow: inset -1px -2px 5px rgba(0, 0, 0, 0.715)
@@ -66,13 +66,15 @@ body {
     color: var(--color-white);
     line-height: 1.7;
     max-width: 100%;
-    background: linear-gradient(132deg, #0b2a78, #1f398f, #41079f, #10246a, #073980, #12318c, #004740, #0a3c75, #281c83);
-    background-size: 2000% 2000%;
+    background: linear-gradient(132deg, #0b2a78, #1f398f, #41079f, #10246a, #073980, #12318c, #036058, #0a3c75, #281c83);
+    background-size: 120% 200%;
 
-    -webkit-animation: ColorgradientAnimation1 185s ease infinite;
-    -moz-animation: ColorgradientAnimation1 185s ease infinite;
-    -o-animation: ColorgradientAnimation1 185s ease infinite;
-    animation: ColorgradientAnimation1 185s ease infinite;
+    
+
+    -webkit-animation: ColorgradientAnimation1 25s ease infinite;
+    -moz-animation: ColorgradientAnimation1 25s ease infinite;
+    -o-animation: ColorgradientAnimation1 25s ease infinite;
+    animation: ColorgradientAnimation1 25s ease infinite;
 }
 @-webkit-keyframes ColorgradientAnimation1 {
     0%{background-position:10% 0%}
