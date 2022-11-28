@@ -20,8 +20,10 @@
 }
 .contact_container{
     width: 100%;
+    
     display: flex;
     justify-content: center;
+    
 }
 
 .contact_option{

@@ -65,16 +65,17 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--color-white);
     line-height: 1.7;
+    height: 7200px;
     max-width: 100%;
     background: linear-gradient(132deg, #0b2a78, #1f398f, #41079f, #10246a, #073980, #12318c, #036058, #0a3c75, #281c83);
     background-size: 120% 200%;
 
     
 
-    -webkit-animation: ColorgradientAnimation1 25s ease infinite;
-    -moz-animation: ColorgradientAnimation1 25s ease infinite;
-    -o-animation: ColorgradientAnimation1 25s ease infinite;
-    animation: ColorgradientAnimation1 2chang5s ease infinite;
+    -webkit-animation: ColorgradientAnimation1 23s ease infinite;
+    -moz-animation: ColorgradientAnimation1 23s ease infinite;
+    -o-animation: ColorgradientAnimation1 23s ease infinite;
+    animation: ColorgradientAnimation1 23s ease infinite;
 }
 @-webkit-keyframes ColorgradientAnimation1 {
     0%{background-position:10% 0%}
