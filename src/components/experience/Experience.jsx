@@ -163,8 +163,8 @@ const Experience = () => {
 								In 2020 Attraktion! redesigned and upgraded the attraction park the Blue Cube at the Danfoss Universe Science Park in Denmark
 							</p>
 							<h4 className="pt-5">Occupation: </h4>
-							<p className="">Project Management</p>
-							<h4>Awards: </h4>
+							<p >Project Management</p>
+							<h4 className="pt-5">Awards: </h4>
 							<p className="">Global Creative Technology Design Award</p>
 						</div>
 					</div>
