@@ -20,39 +20,31 @@ const About = () => {
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" delay="1" animateOnce="true">
             <p className='pb-4'>
                {/*  I am a problem solver but I am also a listener. */}
-                I am a project manager, frontend developer and multimedia technician based in Oslo.
+                I am a frontend developer, project manager and multimedia technician based in Oslo.
                 <br></br>
-                Having worked many years as a sound engineer I am solution oriented
-                when dealing with technical challenges and quick to adapt to changes.
+                I started working in the Vienna State Opera as a sound engineer in my early twenties and learned 
+                to work solution oriented when dealing with technical challenges.
             </p>
             <p className='pb-4'>
-                I have a BFI project management certificate and experience managing 
+                While working as a First Sound Operator on an Aida cruise ship I was deeply 
+                impressed by the organization and logistics on board.
+                I completed a project management course and took the opportunity to manage a portfolio of
                 innovative multimedia installations with Attraktion! GmbH.
             </p>
-            <p className='pb-4'>
-                As a project manager I define objectives and break them down into 
-                smaller project tasks that can be planned and tracked.
-                When working with people I like listening to their opinions and ideas.
-                I value openness and honesty. 
+            <p classname='pb-4'>
+                Working with teams of programmers, designers and technicians I found great value exploring agile concepts to
+                increase transparency, an open exchange of ideas and motivation. 
             </p>
-            <p className='pb-4'>  
-                I find purpose in taking responsibility when I am faced with problems 
-                and find joy when I can contribute to improvements.
-                </p>
+            {/* <p className='pb-4'>
+            </p> */}
             <p className='pb-4'>
-                I am passionate about learning new web technologies, organizational frameworks
-                as well as improving my own communication skills.   
-            </p>
-      
-            <p className='pb-4'>
-                During the corona lockdown I discovered my passion for deb development with udemy and wifi courses
-                and enjoy working on my own project ideas. 
+                Throughout the last two years, I trained the skills to develop homepages and interactive web apps and 
+                completed a'systemic coaching' training to expand my personal skills.
+                In summer 2022 I moved to Norway with my girlfriend and look forward to work as a frontend developer for exciting projects.
+                Besides programming I like to play guitar and sing and really enjoy to chill in the sauna on a cold winter day.
             </p> 
-            <div className="logos p-4 justify-center"> 
-              <img className='wifiLogo m-5 ' src={WIFILOGO}></img>
-              <img className='udemyLogo m-5' src={UDEMYLOGO}></img>
-            </div> 
-                
+          {/*   <p className='pb-4'>
+            </p> */}
               <div className="w-100 flex">
                   <p className="inline-block pb-12">I built this site using </p>
                   <div className="">
@@ -60,9 +52,7 @@ const About = () => {
                   </div>
               </div>
             </AnimationOnScroll>  
-           
         </div>
-           
       </div> 
     </section>
   );
