@@ -72,10 +72,10 @@ body {
 
     
 
-    -webkit-animation: ColorgradientAnimation1 23s ease infinite;
-    -moz-animation: ColorgradientAnimation1 23s ease infinite;
-    -o-animation: ColorgradientAnimation1 23s ease infinite;
-    animation: ColorgradientAnimation1 23s ease infinite;
+    -webkit-animation: ColorgradientAnimation1 43s ease infinite;
+    -moz-animation: ColorgradientAnimation1 43s ease infinite;
+    -o-animation: ColorgradientAnimation1 43s ease infinite;
+    animation: ColorgradientAnimation1 43s ease infinite;
 }
 @-webkit-keyframes ColorgradientAnimation1 {
     0%{background-position:10% 0%}
