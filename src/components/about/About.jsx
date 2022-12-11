@@ -20,7 +20,7 @@ const About = () => {
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" delay="1" animateOnce="true">
             <p className='pb-4'>
                {/*  I am a problem solver but I am also a listener. */}
-                I am a frontend developer, project manager and multimedia technician based in Oslo.
+                I am a <b>Frontend Developer</b>, <b>Project Manager</b> and <b>Multimedia Technician</b> based in Oslo.
                 <br></br>
                 I started working in the Vienna State Opera as a sound engineer in my early twenties and learned 
                 to work solution oriented when dealing with technical challenges.
@@ -28,18 +28,18 @@ const About = () => {
             <p className='pb-4'>
                 While working as a First Sound Operator on an Aida cruise ship I was deeply 
                 impressed by the organization and logistics on board.
-                I completed a project management course and took the opportunity to manage a portfolio of
+                I completed a project management course and got the opportunity to manage a portfolio of
                 innovative multimedia installations with Attraktion! GmbH.
             </p>
             <p classname='pb-4'>
                 Working with teams of programmers, designers and technicians I found great value exploring agile concepts to
                 increase transparency, an open exchange of ideas and motivation. 
             </p>
-            {/* <p className='pb-4'>
-            </p> */}
             <p className='pb-4'>
                 Throughout the last two years, I trained to work as a web developer with freecodecamp, udemy, a Wifi Wien course and the odinproject.
                 During this time I also completed a 'systemic coaching' training to better suited to support my fellow human beings.
+            </p>
+            <p className='pb-4'>
                 In summer 2022 I moved to Norway with my girlfriend and look forward to work as a frontend developer for exciting projects.
                 Besides programming I like to play guitar and sing and really enjoy to chill in the sauna on a cold winter day.
             </p> 
