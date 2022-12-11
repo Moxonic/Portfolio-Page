@@ -38,8 +38,8 @@ const About = () => {
             {/* <p className='pb-4'>
             </p> */}
             <p className='pb-4'>
-                Throughout the last two years, I trained the skills to develop homepages and interactive web apps and 
-                completed a'systemic coaching' training to expand my personal skills.
+                Throughout the last two years, I trained to work as a web developer with freecodecamp, udemy, a Wifi Wien course and the odinproject.
+                During this time I also completed a 'systemic coaching' training to better suited to support my fellow human beings.
                 In summer 2022 I moved to Norway with my girlfriend and look forward to work as a frontend developer for exciting projects.
                 Besides programming I like to play guitar and sing and really enjoy to chill in the sauna on a cold winter day.
             </p> 
