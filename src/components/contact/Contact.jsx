@@ -54,7 +54,7 @@ const Contact = () => {
                         </a>
                     </article>
                 </div>
-
+                {/* <div className='end'></div> */}
             </div>
         </section>
     );

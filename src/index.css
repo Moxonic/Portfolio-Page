@@ -8,6 +8,8 @@
 html {
     /* scroll-snap-type: y proximity; */
     scroll-behavior: smooth;
+    min-height: fit-content;
+    
 }
 
 * {
@@ -24,7 +26,6 @@ html {
 }
 
 :root {
-    
     --color-bg: #1f1f38;
     --color-bg-variant: ##2c2c6c;
     --color-primary: rgb(70 105 193);
@@ -65,17 +66,14 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--color-white);
     line-height: 1.7;
-    height: 100%;
     max-width: 100%;
-    background: linear-gradient(132deg, #0b2a78, #1f398f, #41079f, #10246a, #073980, #12318c, #036058, #0a3c75, #281c83);
-    background-size: 120% 200%;
-
-    
+    background: linear-gradient(132deg, #0b2a78, #1f398f, #41079f, #10246a, #073980, #12318c,  #0a3c75, #281c83,#024e47,#0b2a78, #1f398f,#10246a, #073980, #12318c);
+    background-size: 100% 110%;
 
     -webkit-animation: ColorgradientAnimation1 83s ease infinite;
     -moz-animation: ColorgradientAnimation1 83s ease infinite;
     -o-animation: ColorgradientAnimation1 83s ease infinite;
-    animation: ColorgradientAnimation1 83s ease infinite;
+    animation: ColorgradientAnimation1 20s ease infinite;
 }
 @-webkit-keyframes ColorgradientAnimation1 {
     0%{background-position:10% 0%}
@@ -90,7 +88,7 @@ body {
 @-o-keyframes ColorgradientAnimation1 {
     0%{background-position:10% 0%}
     50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
+    100%{background-position:100% 0%}
 }
 @keyframes ColorgradientAnimation1 {
     0%{background-position:10% 0%}

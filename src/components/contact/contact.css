@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    top:15rem;
 }
 
 .contactSymbol{
@@ -20,7 +19,6 @@
 }
 .contact_container{
     width: 100%;
-    
     display: flex;
     justify-content: center;
     
