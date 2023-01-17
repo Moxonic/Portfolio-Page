@@ -19,13 +19,15 @@ const About = () => {
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeIn" duration="2" delay="1" animateOnce="true">
             <p className='pb-4'> 
-              I am a Web Developer fom Austria based in Oslo since 2022.<br></br>
-              With my passion for clean code and an eye for design I make beautiful websites that work. <br></br>
-              I have two years of experience working with web technologies.  
+              I am a Project Manager, Soundexpert and a Web Developer fom Austria based in Oslo since 2022.<br></br>
+              I thrive when I focus on reaching goals and I love working with capable, independent thinking people.
+              Open communication is important for the exchange of ideas and knowledge and to learn about others perspectives and values.  
+              I believe that this is the key to finding the best solutions in any team effort.
               <br></br> 
+
             </p>
               <div className="w-100 flex">
-                  <p className="inline-block pb-12">I built this site using </p>
+                  <p className="inline-block pb-12">I made this site with </p>
                   <div className="">
                     <div className="word text-sky-400 text-2xl"></div>
                   </div>
