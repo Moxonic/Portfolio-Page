@@ -33,24 +33,27 @@ const Experience = () => {
 					<h5 className="p-9 text-center">Lean back and enjoy!</h5>
 				</AnimationOnScroll>
 			</div>
-			<AnimationOnScroll
-				animateIn="animate__fadeInUp"
-				duration="2"
-				animateOnce="true"
-			>
 
 		{/* ////////////////////////////////VIDEOS /////////////////////////////////////////*/}
-				<div className="allvids">
+				<div className="allVids">
+					<VideoCard
+						title="Attraktion! Showcase 2019/20"
+						occupation="Project Management"
+						description=" Attraktion! creates exceptional media-based experience products such as service robots,
+                    					dome attractions, interactive games and exhibitions"
+						src="https://www.youtube.com/embed/8eZfYiCGXQc?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
+					/>
 					<VideoCard
 						title="Eye to Ear - iPad App"
 						description="Eye to Ear facilitates visually impaired museum visitors to
-                    				experience visual art through an interactive sonification
-                    				approach"
+									experience visual art through an interactive sonification
+									approach"
 						occupation="User Experience & Sound Design"
 						src="https://www.youtube.com/embed/6ApGMwgCt_w?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
 						awards= {eyeToEarAwards}
 					/>
 					<VideoCard 
+					className='videoContainerSpace'
 						title="Mobiglobe"
 						occupation="Sound Design"
 						description="Located adjacent to the Volkswagen headquarters in Wolfsburg,
@@ -58,7 +61,6 @@ const Experience = () => {
                     			state-of-the-art car museum with an interactive gesturebased encyclopedia."
 						src="https://player.vimeo.com/video/127020709?h=b8366ff9e9"
 					/>
-
 					<VideoCard
 						title="Sasso San Gottardo"
 						occupation="Sound Design, Technical Installation"
@@ -77,15 +79,8 @@ const Experience = () => {
 					{/* 		<h4 className="pt-5">Awards: </h4>
                 			<p className="">Global Creative Technology Design Award</p>
             				</div> */}
-					<VideoCard
-						title="Attraktion! Showcase 2019/20"
-						occupation="Project Management"
-						description=" Attraktion! creates exceptional media-based experience products such as service robots,
-                    					dome attractions, interactive games and exhibitions"
-						src="https://www.youtube.com/embed/8eZfYiCGXQc?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
-					/>
 				</div>
-			</AnimationOnScroll>
+			
 		</section>
 	);
 };

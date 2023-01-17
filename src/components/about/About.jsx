@@ -25,8 +25,6 @@ const About = () => {
               Open communication has been important for my success when working in teams and I believe it is
               the key to overcome challenges together.
               <br></br> 
-              I 
-
             </p>
               <div className="w-100 flex">
                   <p className="inline-block pb-12">I made this site with </p>

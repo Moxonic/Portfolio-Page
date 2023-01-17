@@ -3,9 +3,16 @@
     height: auto;
     position: relative;
 }
-
+.allVids{
+    scroll-snap-type: y mandatory;
+}
+.videoContainerSpace{
+    scroll-snap-align: start;
+    height: 90vh;
+}
 .videoContainer{
-    min-height: 400px;
+    
+    min-height: auto;
     margin: 5rem;
     justify-content: space-evenly;
     margin: 7rem 0rem;
