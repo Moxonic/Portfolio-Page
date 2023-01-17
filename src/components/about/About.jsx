@@ -21,9 +21,11 @@ const About = () => {
             <p className='pb-4'> 
               I am a Project Manager, Soundexpert and a Web Developer fom Austria based in Oslo since 2022.<br></br>
               I thrive when I focus on reaching goals and I love working with capable, independent thinking people.
-              Open communication is important for the exchange of ideas and knowledge and to learn about others perspectives and values.  
-              I believe that this is the key to finding the best solutions in any team effort.
+              <br></br>
+              Open communication has been important for my success when working in teams and I believe it is
+              the key to overcome challenges together.
               <br></br> 
+              I 
 
             </p>
               <div className="w-100 flex">

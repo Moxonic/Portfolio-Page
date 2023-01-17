@@ -6,7 +6,7 @@ var words = [
     "JavaScript",
     "ReactJS",
     "Tailwind",
-    "❤️",
+    "💙💙💙",
     "Git"
 ],
     part,
