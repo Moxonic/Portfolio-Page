@@ -1,11 +1,17 @@
 import React from 'react';
-import Awards from './Awards';
+
+/* function IframeVideo({ src, title }) {
+    const [isPlaying, setIsPlaying] = useState(false);
+  
+    const handleClick = () => {
+      setIsPlaying(!isPlaying);
+    }; */
 
 function VideoCard(props) {
     return (<div >
                 <div className="
                             videoContainer
-                            p-2 mx-3 my-9 flex-col rounded-md 
+                            p-2 mx-8 my-12 flex-col rounded-md 
                             xl:flex xl:flex-row xl:m-20 xl:items-center 
                             xl:justify-evenly
                             ">

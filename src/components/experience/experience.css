@@ -3,19 +3,20 @@
     height: auto;
     position: relative;
 }
+.paging-item{
+    margin: 10px;
+}
 .allVids{
     scroll-snap-type: y mandatory;
+    height: 100vh;
 }
 .videoContainerSpace{
     scroll-snap-align: start;
     height: 90vh;
 }
 .videoContainer{
-    
     min-height: auto;
-    margin: 5rem;
     justify-content: space-evenly;
-    margin: 7rem 0rem;
     background: rgba(0, 255, 166, 0.155);
     border: 2px solid rgba(0, 183, 255, 0.607);
     backdrop-filter: blur(2px);
