@@ -16,15 +16,15 @@ function VideoCard(props) {
                             xl:justify-evenly
                             ">
                     <div className="wrapperwrapper xl:w-3/4 ">
-                        <div className="videoWrapper  
-                                    xl:flex-row 
-                                    ">
+                        <div className="videoWrapper xl:flex-row pt-5">
+
                             <iframe
                                 className="h-full w-full xl:h-96 "
                                 allow="fullscreen;"
                                 type="text/html"
                                 src={props.src}
                             ></iframe>
+
                         </div>
                     </div>
                     <div className="experience__description flex-col content-center items-center xl:w-96 xl:p-6 ">

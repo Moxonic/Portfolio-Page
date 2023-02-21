@@ -6,16 +6,18 @@ import Experience from './components/experience/Experience'
 import Contact from './components/contact/Contact'
 import BackgroundParticles from './components/bg-design/BackgroundParticles'
 import "animate.css/animate.min.css";
+import Videos from './components/videos/Videos'
 
 const App = () => {
   return (
     <>
-      <div className="container">
+      <div className="container snap-y snap-proximity">
         <BackgroundParticles  />
         <Nav />
         <Header />
-        <About />
-        <Experience />
+        <About className='snap-start'/>
+        <Experience className='snap-start'/>
+        <Videos className='snap-start'/>
         <Contact />
       </div>
     </>
