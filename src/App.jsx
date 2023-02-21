@@ -11,13 +11,13 @@ import Videos from './components/videos/Videos'
 const App = () => {
   return (
     <>
-      <div className="container snap-y snap-proximity">
+      <div className="container ">
         <BackgroundParticles  />
         <Nav />
         <Header />
-        <About className='snap-start'/>
-        <Experience className='snap-start'/>
-        <Videos className='snap-start'/>
+        <About />
+        <Experience />
+        <Videos />
         <Contact />
       </div>
     </>

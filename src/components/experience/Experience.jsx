@@ -17,21 +17,14 @@ const Experience = () => {
 				<AnimationOnScroll
 					animateIn="animate__fadeIn"
 					duration="2"
-					delay="1"
-				>
-					<h1 className=" text-center">Experience</h1>
-				
-				>
-					<p className="legend  text-center max-w-3xl m-auto p-9">
-						Welcome to my showreel! <br></br>The following selection showcases a selection of my work and projects I was involved in, 
-						so sit back, relax, and enjoy the show!
-					</p>
-					
+					delay="1">
+				<h1 className=" text-center">Experience</h1>
+				<p className="legend  text-center max-w-3xl m-auto p-9">
+					Welcome to my showreel! <br></br>The following selection showcases some of my work and projects I was involved in, 
+					so sit back, relax, and enjoy the show!
+				</p>
 				</AnimationOnScroll>
 			</div>
-
-			
-
 		</section>
 	);
 };

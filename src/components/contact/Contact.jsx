@@ -12,14 +12,12 @@ const Contact = () => {
         <section id="contact">
             <h5 className=""> Contact me</h5>
             <img className='rounded-full center w-60 h-60 mx-auto xl:w-56 xl:h-56 m-5 border-solid border-2' src={FREEDSD} alt="looking nice"></img>
-            
-
             <div className=" contact_container flex-col items-center pl-4 lg:flex-row">
                 <div >
                     <article className="contact_option justify-center">
                         <a href="mailto:d.soto@gmx.at" 
                         className="flex justify-center">
-                            <MdOutlineEmail class="contactSymbol" />
+                            <MdOutlineEmail className="contactSymbol" />
                             <h4 className='symboltext w-32'>Email</h4>
                         </a>
                     </article>
@@ -29,7 +27,7 @@ const Contact = () => {
                     <article className="contact_option">
                         <a href="https://wa.me/4793926209" target="_blank" rel="noreferrer" 
                         className="flex justify-center">
-                            <BsWhatsapp class="contactSymbol" />
+                            <BsWhatsapp className="contactSymbol" />
                             <h4 className='symboltext w-32'>WhatsApp</h4>
                         </a>
                     </article>
@@ -49,7 +47,7 @@ const Contact = () => {
                     <article className="contact_option">
                         <a href="https://github.com/Moxonic" target="_blank" rel="noreferrer" 
                         className="flex justify-center">
-                            <BsGithub class="contactSymbol" />
+                            <BsGithub className="contactSymbol" />
                             <h4 className='symboltext w-32'>Github</h4>
                         </a>
                     </article>

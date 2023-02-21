@@ -29,10 +29,10 @@ function VideoCard(props) {
                     </div>
                     <div className="experience__description flex-col content-center items-center xl:w-96 xl:p-6 ">
                         <h3 className="pt-5 xl:pt-0">{props.title}</h3>
-                        <p className="text-left">
+                        <p className="text-justify">
                             {props.description}
                         </p>
-                        <h4 className="pt-5 xl:pt-0 ">Occupation: </h4>
+                        <h4 className="pt-5 xl:pt-0 ">Responsibility: </h4>
                         <p className='pb-5'>{props.occupation}</p>
                         
                     </div>

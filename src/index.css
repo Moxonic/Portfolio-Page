@@ -6,10 +6,9 @@
 @import "animate.css/animate.min.css";
 
 html {
-    scroll-snap-type: y proximity;
+ /*    scroll-snap-type: y proximity; */
     scroll-behavior: smooth;
-    min-height: fit-content;
-    
+    min-height: fit-content;  
 }
 
 * {
