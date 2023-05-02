@@ -20,32 +20,19 @@ const About = () => {
 						<h1 className="aboutme text-center pb-4">About me:</h1>					
 						<p className="pb-4">
 							I am a versatile and driven professional
-							with a passion for project management, audio
-							expertise, and web development. 
+							with a passion for projects that create memorable experiences. 
               </p>
               <p className="pb-4">
-              With roots in
-							Austria, I now call Oslo my home and have been based
-							here since autumn 2022. As a project manager, I am
-							focused on ensuring that projects are executed
-							efficiently and effectively, with a focus on
-							achieving the desired goals. 
+              				With roots in
+							Austria, I now call Oslo my home and live here since autumn 2022. 
+							I love to learn new languages, technologies and skills.
+	
               </p>
               <p className="pb-4">
-              I thrive in collaborative environments and love working with
-							individuals who are independent thinkers and capable
-							of bringing unique perspectives to the table. Open
-							communication is a critical component of my approach
-							to project management, and I believe it is the key
-							to overcoming challenges and achieving success as a
+              				I thrive in collaborative environments and love working with
+							individuals who are independent thinkers and that bringing unique perspectives to the table. 
+							I believe that open communication is the key to overcoming challenges and achieving success as a
 							team. </p>
-              <p className="pb-4"> If you're looking for a professional
-							who is driven, dedicated, and committed to
-							delivering results, look no further! I am eager to
-							bring my skills and experience to your next project.
-							
-							
-						</p>
 						<div className="w-100 flex">
 							<p className="inline-block pb-12">
 								I made this site with{" "}
