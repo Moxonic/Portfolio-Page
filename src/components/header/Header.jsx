@@ -9,7 +9,7 @@ const Header = () => {
     <section id='header'className=" header__container">
       
       <div className="header_container_div">
-        <h4> Hello I'm </h4>
+        <h4> Hi, I am </h4>
         <h1> Daniel Soto Delgado </h1>
         <div className="me">
           <img className='myPic' src={MYPIC} alt="Daniel looking good">

@@ -4,6 +4,7 @@ var words = [
     "HTML",
     "CSS",
     "JavaScript",
+    "jQuery",
     "ReactJS",
     "Tailwind",
     "Git"

@@ -17,22 +17,19 @@ const About = () => {
 						duration="2"
 						animateOnce="true"
 					>
-						<h1 className="aboutme text-center pb-4">About me:</h1>					
+						<h1 className="aboutme text-center pb-4">About:</h1>					
 						<p className="pb-4">
-							I am a versatile and driven professional
-							with a passion for projects that create memorable experiences. 
+						Hello! I'm someone who has always been deeply interested in the creative and technical aspects of music and sound engineering. I've also found myself drawn to organization and project management, which has given me valuable skills in coordinating people and resources. In 2020, I decided to pursue a new challenge and dove into web development, fueled by my love of problem solving and technology. Alongside this, I also completed a 2-year coaching diploma to build better, more meaningful connections with people around me and learn how to support them in sustainable ways. I'm excited to continue growing and learning, and am always looking for ways to use my skills and passion to make a positive impact.
               </p>
               <p className="pb-4">
-              				With roots in
-							Austria, I now call Oslo my home and live here since autumn 2022. 
+              				With roots in Austria, I now call Oslo my home and live here since autumn 2022. 
 							I love to learn new languages, technologies and skills.
 	
               </p>
               <p className="pb-4">
               				I thrive in collaborative environments and love working with
 							individuals who are independent thinkers and that bringing unique perspectives to the table. 
-							I believe that open communication is the key to overcoming challenges and achieving success as a
-							team. </p>
+							I believe that open communication is the key to overcoming challenges and achieving success together. </p>
 						<div className="w-100 flex">
 							<p className="inline-block pb-12">
 								I made this site with{" "}
