@@ -15,7 +15,7 @@ const App = () => {
         <BackgroundParticles  />
         <Nav />
         <Header />
-        <About />
+       {/*  <About /> */}
         <Experience />
         <Videos />
         <Contact />
