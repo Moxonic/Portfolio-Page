@@ -1,27 +1,38 @@
-import React from 'react'
-import Header from './components/header/Header'
-import Nav from './components/nav/Nav.jsx'
+import React from 'react';
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import About from './components/about/About.jsx'
-import Experience from './components/experience/Experience'
-import Contact from './components/contact/Contact'
-import BackgroundParticles from './components/bg-design/BackgroundParticles'
+import Header from './components/header/Header';
+import Nav from './components/nav/Nav.jsx';
+import Experience from './components/experience/Experience';
+import Contact from './components/contact/Contact';
+import Videos from './components/videos/Videos';
+import BackgroundParticles from './components/bg-design/BackgroundParticles';
 import "animate.css/animate.min.css";
-import Videos from './components/videos/Videos'
+
+/* function customText(){
+  let{text}=useParams();
+  console.log(text);
+} */
 
 const App = () => {
   return (
-    <>
-      <div className="container ">
-        <BackgroundParticles  />
-        <Nav />
-        <Header />
-       {/*  <About /> */}
-        <Experience />
-        <Videos />
-        <Contact />
-      </div>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/*" element={
+        <div>
+          <BackgroundParticles />
+          <Nav />
+          <Header /> 
+          <Routes>
+            <Route path=':text' element ={<About />} />
+          </Routes>
+          <Videos />
+          <Contact />
+        </div>
+      } />
+    </Routes>
+  </BrowserRouter>
   )
 }
 
-export default App  //exporting the current jsx to be imported in index.js
+export default App;
