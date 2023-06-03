@@ -1,11 +1,11 @@
-import React from 'react'
+/* import React from 'react'
 import VideoCard from './VideoCard'
 import Carousel from 'nuka-carousel';
 
 function Videos() {
   return (
-    <div>{/* ////////////////////////////////VIDEOS /////////////////////////////////////////*/}
-    <div className="allVids">
+    <div>{
+    <div className="allVids h-auto">
         <Carousel 
         
         autoplay={true} 
@@ -44,7 +44,7 @@ function Videos() {
                 src="https://www.youtube.com/embed/6ApGMwgCt_w?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
                 
             />
-            <VideoCard
+         {/*    <VideoCard
                 className='videoContainerSpace'
                 title="Mobiglobe"
                 occupation="Sound Design"
@@ -67,11 +67,11 @@ function Videos() {
                 description="In 2020 Attraktion! redesigned and upgraded the attraction park the Blue Cube at the Danfoss Universe Science Park in Denmark"
                 title="Blue Cube 2.0"
                 src="https://www.youtube.com/embed/IbSHel9CRT0?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
-            />
+            /> }
         </Carousel>
     </div>
     </div>
     )
 }
 
-export default Videos;
+export default Videos; */

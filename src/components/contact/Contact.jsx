@@ -10,7 +10,7 @@ import FREEDSD from "../../assets/Danielfree22.png";
 const Contact = () => {
     return (
         <section id="contact">
-            <h5 className=""> Contact me</h5>
+            <h5 className="">Feel free, contact me</h5>
             <img className='rounded-full center w-60 h-60 mx-auto xl:w-56 xl:h-56 m-5 border-solid border-2' src={FREEDSD} alt="looking nice"></img>
             <div className=" contact_container flex-col items-center pl-4 lg:flex-row">
                 <div >
