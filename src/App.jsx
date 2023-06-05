@@ -23,10 +23,10 @@ const App = () => {
           <BackgroundParticles />
           <Nav />
           <Header /> 
-        {/*   <Routes>
-            <Route path=':text' element ={<About />} />
-          </Routes> */}
-          <About/>
+          <Routes>
+            <Route path='/:text' element ={<About />} />
+          </Routes>
+         {/*  <About/> */}
           <Contact />
         </div>
       } />
