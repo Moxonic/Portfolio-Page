@@ -5,14 +5,15 @@ import VideoCard from "../videos/VideoCard.jsx";
 // import FREEDSD from "../../assets/Danielfree22.png";
 import "./About.js";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { useParams } from "react-router-dom";
+import { useParams , useSearchParams} from "react-router-dom";
 import languageLogos from "../../assets/pngegg.png";
 
 
 
 const About = (props) => {
-	const { text } = useParams();
-	console.log("params:", text);
+	const [searchParams, setSearchParams] = useSearchParams();
+	const paramText = searchParams.get("text");
+	console.log(paramText)
 	return (
 		<section id="about" className="flex lg:w-2/3 m-auto">
 			<div className="flex-col-reverse m-auto xl:flex xl:flex-row-reverse xl:w-2/3">
@@ -88,8 +89,8 @@ const About = (props) => {
 								className="youtubeIframe"
 								/* allow="fullscreen;" */
 								allow="autoplay; encrypted-media"
-								allowfullscreen
-								autoplay
+								allowFullScreen
+								autoPlay
 								muted
 								type="text/html"
 								src="https://www.youtube.com/embed/6ApGMwgCt_w?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&vq=hd720&origin=https://youtubeembedcode.com"
@@ -144,7 +145,7 @@ const About = (props) => {
 
 						<div className="pb-4">
 						
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/ydQzgO29ehM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/ydQzgO29ehM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 						</div>
 						<p className="pb-8">As a sound designer for brands like Medel I managed to communicate their brandvalues in an appealing way.</p>
 
@@ -288,7 +289,7 @@ const About = (props) => {
 							exceptional, user-centered websites.
 						</p>
 						<img src={languageLogos} alt='logos of html, css and javascript' className="pb-4"/>
-						<p className="pb-4">{text}</p>
+						<p className="pb-4">{paramText}</p>
 						{/* 
 							The impact of the Corona pandemic on the entertainment industry led me to reevaluate my career path. I fully embraced the challenge of learning web development driven by my passion for problem-solving and communication technology. After completing a full-stack web development course and relocating to Oslo, I am dedicated to building user-friendly front-end designs that leave a lasting impact. I continuously expand my knowledge, collaborate effectively in cross-functional teams, and strive to bring fresh ideas and maintain high coding standards. Let's work together to create exceptional, user-centered websites.
 							*/}
