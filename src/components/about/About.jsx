@@ -278,7 +278,14 @@ const About = (props) => {
 							alt="Daniel sitting on the beach playing guitar"
 							className="m-auto rounded-full h-52 w-52 mb-4"
 						/>
-						<p className="pb-4">
+								<p className="pb-4">
+							The impact of the Corona pandemic on the
+							entertainment industry and my passion for
+							problem-solving and communication technology led me to deep-dive into learning web development. I completed a
+							web development online course and started building websites 
+							and applications.
+						</p> 
+{/* 						<p className="pb-4">
 							The impact of the Corona pandemic on the
 							entertainment industry led me to reevaluate my
 							career path. Driven by my passion for
@@ -286,13 +293,13 @@ const About = (props) => {
 							embraced learning web development. I completed a
 							full-stack web development course in 2021 and moved
 							to Oslo in 2022.
-						</p>
-						<img
+						</p> */}
+					{/* 	<img
 							src="https://www.freecodecamp.org/news/content/images/2022/08/pexels-antonio-batinic--4164418--1-.jpg"
 							alt="screen with javascript code"
 							className="pb-4"
-						/>
-						<p className="pb-4">
+						/> */}
+					{/* 	<p className="pb-4">
 							I am dedicated to building user-friendly front-end
 							designs that leave a lasting impact. I continuously
 							expand my knowledge, collaborate effectively in
@@ -300,20 +307,7 @@ const About = (props) => {
 							ideas and maintain high coding standards. Let's work
 							together to create exceptional, user-centered
 							websites.
-						</p>
-						<img
-							src={languageLogos}
-							alt="logos of html, css and javascript"
-							className="pb-4"
-						/>
-						<p className="pb-4">{paramText}</p>
-
-						<p className="pb-4">
-							Outside of coding, I enjoy quality time with my
-							girlfriend, playing guitar, and exploring the
-							outdoors.
-						</p>
-						<p className="pb-4"></p>
+						</p> */}
 						<div className="w-100 flex">
 							<p className="inline-block pb-12">
 								For this webpage I used:
@@ -322,6 +316,22 @@ const About = (props) => {
 								<div className="word text-sky-400 text-2xl"></div>
 							</div>
 						</div>
+						<img
+							src={languageLogos}
+							alt="logos of html, css and javascript"
+							className="pb-4"
+						/>
+						<p className="pb-4">{paramText}</p>
+						<p className="pb-4">
+							After working in several different opera houses in Vienna I decided to move to Norway with my girlfriend in 2022. I learned Norwegian and currently work as a freelance webdeveloper and volunteer as a soundengineer for the American Lutheran Congregation Oslo on sundays.
+
+						</p>
+						<p className="pb-4">
+							Besides coding, I enjoy quality time with my
+							girlfriend, playing guitar, and exploring the
+							outdoors.
+						</p>
+						<p className="pb-4"></p>
 					</AnimationOnScroll>
 				</div>
 			</div>
