@@ -143,8 +143,7 @@ const About = (props) => {
 						</p>
 						<div className="youtubeContainer">
 							<iframe
-								width="560"
-								height="315"
+								className="youtubeIframe"
 								src="https://www.youtube.com/embed/ydQzgO29ehM"
 								title="YouTube video player"
 								frameBorder="0"
