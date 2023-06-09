@@ -1,19 +1,15 @@
 import React from "react";
-import "./About";
 import "./about.css";
-import VideoCard from "../videos/VideoCard.jsx";
-// import FREEDSD from "../../assets/Danielfree22.png";
 import "./About.js";
+import VideoCard from "../videos/VideoCard.jsx";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { useParams , useSearchParams} from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import languageLogos from "../../assets/pngegg.png";
-
-
 
 const About = (props) => {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const paramText = searchParams.get("text");
-	console.log(paramText)
+	console.log(paramText);
 	return (
 		<section id="about" className="flex lg:w-2/3 m-auto">
 			<div className="flex-col-reverse m-auto xl:flex xl:flex-row-reverse xl:w-2/3">
@@ -26,8 +22,8 @@ const About = (props) => {
 						{/* <h1 className="aboutme text-center pb-4">About:</h1> */}
 						<p className="pb-4">
 							I was born and raised in Austria, to be more
-							specific in the little city of Innsbruck which is
-							surrounded by tyrolean mountains and nature.
+							specific in the little city of Innsbruck in the
+							heart of the tyrolean alps.
 						</p>
 						<img
 							src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180221134637/iStock-539009044.jpg"
@@ -35,11 +31,10 @@ const About = (props) => {
 							className=" inline-block pb-4"
 						/>
 						<p className="pb-8">
-							Growing up surrounded by mountains has had a
-							significant impact on me and my love for nature. I'm
-							grateful for the wonderful memories of snowboarding
-							with friends and exploring the mountains on
-							unforgettable trips.
+							Growing up surrounded by mountains made me love
+							nature from a young age and I am grateful for the
+							wonderful memories of snowboarding with friends and
+							exploring the mountains on unforgettable trips.
 						</p>
 						<img
 							src="https://miro.medium.com/v2/resize:fit:1400/1*U_HEg407PCp7VU-M0gEJ7Q.jpeg"
@@ -48,10 +43,10 @@ const About = (props) => {
 						/>
 						<p className="pb-4">
 							During school I developed a passion for Hip-Hop and
-							street art. At the age of 15 I started programming
-							beats and was intruiged by sampling old jazz and
-							classical music tracks from my parents vinyl
-							collection.
+							street art as a way of expression. At the age of 14
+							I started programming beats and was intruiged by
+							sampling old jazz and classical music tracks from my
+							parents vinyl collection.
 						</p>
 						{/* 	<img
 							src="https://www.trend.at/_storage/asset/5942725/storage/preview/file/87272654/48582516.jpg"
@@ -130,7 +125,8 @@ const About = (props) => {
 						</div>
 						<p className="pb-8">
 							For the museum in the San Gottardo fortress which is
-							hidden deep inside of the Swiss Alps I built 7 informational multimedia installations. These
+							hidden deep inside of the Swiss Alps I built 7
+							informational multimedia installations. These
 							installations explore topics such as energy, water,
 							internet security, and climate change.
 						</p>
@@ -138,18 +134,32 @@ const About = (props) => {
 							src="https://veechxveech.com/wp-content/uploads/2015/10/ServusTVNews-Studio-2-Veech-x-Veech-1024x682.jpg"
 							alt="Red Bull Servus TV Studio"
 							className=" inline-block pb-4"
-							/>
-						<p className="pb-4"> 
-						I have valuable experience in audio and video production, working on set and shooting for reputable broadcasters including Servus TV, ORF, and W24. 
+						/>
+						<p className="pb-4">
+							I have valuable experience in audio and video
+							production, working on set and shooting for
+							reputable broadcasters including Servus TV, ORF, and
+							W24.
 						</p>
-
-						<div className="pb-4">
-						
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/ydQzgO29ehM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+						<div className="youtubeContainer">
+							<iframe
+								width="560"
+								height="315"
+								src="https://www.youtube.com/embed/ydQzgO29ehM"
+								title="YouTube video player"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowFullScreen
+							></iframe>
 						</div>
-						<p className="pb-8">As a sound designer for brands like Medel I managed to communicate their brandvalues in an appealing way.</p>
-
-
+						<p className="pb-8">
+							As a sound designer, I capture the essence of brand
+							values by implementing everyday objects into musical
+							expressions. An example of this can be found in my
+							collaboration with Medel, a hearing aid company. In
+							this project, I incorporated the sound of a car
+							trunk opening. Can you hear it?
+						</p>
 						<div className="pb-4">
 							{/* 	<img
 								src="https://www.wien.info/resource/image/290664/19x10/1200/630/3e15dd255d76bae1ef3af25e17e27bb4/0C4B1B0C3FEA6D7DF35F067DE09AF89F/40520-ringstrasse-2015-staatsoper-tags-schraeg-von-oben.webp"
@@ -195,12 +205,12 @@ const About = (props) => {
 							the front-of-house audio, while also sending a
 							distinct mix to the recording truck or streaming
 							department.
-						</p><img
+						</p>
+						<img
 							src="https://decruisegids.nl/wp-content/uploads/aidacosma.jpg"
 							alt="Aida Cruise Ship Cosma"
 							className=" inline-block pb-4"
 						/>
-						
 						<p className="pb-4">
 							After two years, my desire to explore more of the
 							world led me to embark on a new adventure as a sound
@@ -276,29 +286,34 @@ const About = (props) => {
 							problem-solving and communication technology I fully
 							embraced learning web development. I completed a
 							full-stack web development course in 2021 and moved
-							to Oslo in 2022. 
-							</p>
-						<img src="https://www.freecodecamp.org/news/content/images/2022/08/pexels-antonio-batinic--4164418--1-.jpg" alt='screen with javascript code' className="pb-4"/>
-							<p className="pb-4">
-							I am dedicated to building
-							user-friendly front-end designs that leave a lasting
-							impact. I continuously expand my knowledge,
-							collaborate effectively in cross-functional teams,
-							and strive to bring fresh ideas and maintain high
-							coding standards. Let's work together to create
-							exceptional, user-centered websites.
+							to Oslo in 2022.
 						</p>
-						<img src={languageLogos} alt='logos of html, css and javascript' className="pb-4"/>
+						<img
+							src="https://www.freecodecamp.org/news/content/images/2022/08/pexels-antonio-batinic--4164418--1-.jpg"
+							alt="screen with javascript code"
+							className="pb-4"
+						/>
+						<p className="pb-4">
+							I am dedicated to building user-friendly front-end
+							designs that leave a lasting impact. I continuously
+							expand my knowledge, collaborate effectively in
+							cross-functional teams, and strive to bring fresh
+							ideas and maintain high coding standards. Let's work
+							together to create exceptional, user-centered
+							websites.
+						</p>
+						<img
+							src={languageLogos}
+							alt="logos of html, css and javascript"
+							className="pb-4"
+						/>
 						<p className="pb-4">{paramText}</p>
-						{/* 
-							The impact of the Corona pandemic on the entertainment industry led me to reevaluate my career path. I fully embraced the challenge of learning web development driven by my passion for problem-solving and communication technology. After completing a full-stack web development course and relocating to Oslo, I am dedicated to building user-friendly front-end designs that leave a lasting impact. I continuously expand my knowledge, collaborate effectively in cross-functional teams, and strive to bring fresh ideas and maintain high coding standards. Let's work together to create exceptional, user-centered websites.
-							*/}
+
 						<p className="pb-4">
 							Outside of coding, I enjoy quality time with my
 							girlfriend, playing guitar, and exploring the
 							outdoors.
 						</p>
-
 						<p className="pb-4"></p>
 						<div className="w-100 flex">
 							<p className="inline-block pb-12">

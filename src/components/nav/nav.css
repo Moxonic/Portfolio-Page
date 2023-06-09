@@ -16,8 +16,8 @@ nav{
 nav a {
     background: rgba(1, 1, 105, 0.675);
     padding: 0.5rem;
-    border-radius: 20%; 
-padding-right: 1rem;
+    border-radius: 50%; 
+    margin: 5px;;
     display: flex;
     color: var(--color-light);
     font-size: 1rem;
