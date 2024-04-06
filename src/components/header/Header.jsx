@@ -6,7 +6,7 @@ import MYPIC from "../../assets/daniel__optimzed.jpg";
 
 const Header = () => {
   return (
-    <section id='header'className=" header__container">
+    <div id='header'className=" header__container">
       
       <div className="header_container_div">
         <h4> Hi, I am </h4>
@@ -17,7 +17,7 @@ const Header = () => {
         </div> 
         <CTA /> {/* download and contact buttons */}
       </div>
-    </section>
+    </div>
   );
 };
 

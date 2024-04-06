@@ -1,0 +1,10 @@
+.post_textBg{
+    background-color: #00105ece;
+   
+}
+.post_fadeIn{
+    background-image: linear-gradient(transparent, #00105ece);    
+}
+.post_topFadeIn{
+    background-image: linear-gradient( #00105ece, transparent);    
+}

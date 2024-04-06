@@ -3,7 +3,7 @@
     top:auto;
     height: 100vh;
     overflow: visible;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start;  */
 }
 
 

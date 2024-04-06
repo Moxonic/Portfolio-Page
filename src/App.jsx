@@ -8,7 +8,7 @@ import Contact from './components/contact/Contact';
 import Videos from './components/videos/Videos';
 import BackgroundParticles from './components/bg-design/BackgroundParticles';
 import "animate.css/animate.min.css";
-
+import Portfolio from './components/portfolio/Portfolio';
 
 /* function customText(){
   let{text}=useParams();
@@ -23,7 +23,8 @@ const App = () => {
         <div>
           <BackgroundParticles />
           <Nav />
-          <Header /> 
+          <Header />
+          {/* <Portfolio />  */}
           <About/>
           <Contact />
         </div>

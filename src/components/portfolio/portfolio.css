@@ -1,0 +1,19 @@
+html{
+    scroll-snap-type: proximity	;
+}
+.snap-container {
+    position: relative;
+    overflow-y: relative;
+    overscroll-behavior: contain;
+    scroll-snap-type: y proximity;
+    height: 1000px;
+    width: 100vw;
+    
+
+}
+/* 
+.snap-section {
+    height: 20%;
+    width: 100%;
+    scroll-snap-align: start;
+} */

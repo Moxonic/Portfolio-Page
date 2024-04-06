@@ -6,9 +6,35 @@
 @import "animate.css/animate.min.css";
 
 html {
- /*    scroll-snap-type: y proximity; */
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
     scroll-behavior: smooth;
     min-height: fit-content;  
+}
+
+
+/* .section{
+    scroll-snap-align: start;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.scrollContainer{
+    scroll-snap-type: y proximity;
+    
+   /*  scroll-behavior: smooth; */
+    min-height: fit-content;  
+}
+.scrollItem{
+    scroll-snap-align: start;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 * {
@@ -33,8 +59,6 @@ html {
 
     --transition: all 400ms ease;
 }
-
-
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -123,7 +147,9 @@ h5 {
     font-size: 1.2rem;
 }
 
-
+p{
+    padding: 2rem;
+}
 section {
     height: 100vh;
 }
