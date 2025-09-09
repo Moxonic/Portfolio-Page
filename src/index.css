@@ -47,41 +47,40 @@ html {
     list-style: none;
     text-decoration: none;
     /* top: 3rem; */
-    /* color: rgb(135, 121, 121); */
+    color: rgb(135, 121, 121); 
 }
 
 :root {
     --color-bg: #1f1f38;
     --color-bg-variant: ##2c2c6c;
-    --color-primary: rgb(70 105 193);
+    --color-primary: rgb(228, 228, 228);
     --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
+    --color-light: rgb(120, 119, 119);
 
     --transition: all 400ms ease;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-	background-color: #41079f;
+    width: 3px;
+    background: linear-gradient(to right, #fff, #d6d6d6);
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 5px;
+/*  */	border-radius: 5px;
 	background-color: #e6e6e619;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+    width: 10px;
     border-radius: 5px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgb(0, 145, 255);
-    box-shadow: inset -1px -2px 5px rgba(0, 0, 0, 0.715)
+	background-color: rgb(133, 133, 133);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(1, 138, 244);
+    background-color: rgba(109, 109, 109, 0.447);
+    width: 10px;
     box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.701);
 }
 
@@ -90,7 +89,7 @@ body {
     color: var(--color-white);
     line-height: 1.7;
     max-width: 100%;
-    background: linear-gradient(132deg, #0b2a78, #10246a, #12318c,#0a3c75, #281c83,#0b2a78, #1f398f,#10246a, #073980, #12318c);
+    background: white;
     background-size: 100% 110%;
 
     -webkit-animation: ColorgradientAnimation1 83s ease infinite;
@@ -131,24 +130,29 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
+    padding: 0rem 0rem 0rem 2rem;
 }
 
 h3 {
     font-size: 1.4rem;
-    
+    padding: 0rem 0rem 0rem 2rem;
+
 }
 
 h4 {
     font-size: 1.3rem;
+        padding: 0rem 0rem 0rem 2rem;
+
 }
 
 h5 {
     font-size: 1.2rem;
+    color: rgb(135, 121, 121); 
 }
 
 p{
-    padding: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
 }
 section {
     height: 100vh;

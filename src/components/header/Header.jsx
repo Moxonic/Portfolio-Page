@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import CTA from "./CTA";
-import MYPIC from "../../assets/daniel__optimzed.jpg";
+import MYPIC from "../../assets/CvPhotoDanielSotoDelgado25.jpg";
 
 
 const Header = () => {
@@ -9,15 +9,16 @@ const Header = () => {
     <div id='header'className=" header__container">
       
       <div className="header_container_div">
-        <h4> Hi, I am </h4>
-        <h1> Daniel Soto Delgado </h1>
-        <div className="me">
-          <img className='myPic' src={MYPIC} alt="Daniel looking good">
-          </img>
-        </div> 
-        <CTA /> {/* download and contact buttons */}
+        
+        <h1> Project Portfolio </h1>
+        <h5 className="text-light">Daniel Soto Delgado</h5>
+       
+     {/*    <CTA /> {/* download and contact buttons */} 
       </div>
+{/*       image="https://miro.medium.com/v2/resize:fit:1400/1*U_HEg407PCp7VU-M0gEJ7Q.jpeg"
+ */}
     </div>
+  
   );
 };
 

@@ -6,7 +6,6 @@ import Nav from './components/nav/Nav.jsx';
 import Experience from './components/experience/Experience';
 import Contact from './components/contact/Contact';
 import Videos from './components/videos/Videos';
-import BackgroundParticles from './components/bg-design/BackgroundParticles';
 import "animate.css/animate.min.css";
 import Portfolio from './components/portfolio/Portfolio';
 
@@ -21,8 +20,8 @@ const App = () => {
     <Routes>
       <Route path="*" element={
         <div>
-          <BackgroundParticles />
-          <Nav />
+          
+         {/*  <Nav /> */}
           <Header />
           {/* <Portfolio />  */}
           <About/>

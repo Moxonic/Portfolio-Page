@@ -1,7 +1,7 @@
 
 #header {
     top:auto;
-    height: 100vh;
+    height: 68vh;
     overflow: visible;
     /* scroll-snap-align: start;  */
 }
@@ -37,7 +37,8 @@
     padding-top: 0px;
     position: static;
     left: calc(50% - 11rem);
-    margin-top: 1.5rem;
+    margin: 1.5rem;
+    
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
