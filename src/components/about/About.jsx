@@ -1,12 +1,8 @@
-import React from "react";
 import "./about.css";
 import "./About.js";
-import Post from "./posts/Post";
-import VideoCard from "../videos/VideoCard.jsx";
-import danielOnARock from "../../assets/DanielOnARock.jpg";
-/* import { AnimationOnScroll } from "react-animation-on-scroll";
- */ import { useParams, useSearchParams } from "react-router-dom";
-import languageLogos from "../../assets/pngegg.png";
+import SP from "../../assets/SPOStill.png"; 
+import SPL from "../../assets/SPstill.jpg";
+import { useParams, useSearchParams } from "react-router-dom";
 
 const About = (props) => {
 	const [searchParams, setSearchParams] = useSearchParams();
@@ -31,8 +27,10 @@ const About = (props) => {
 					></iframe>
 				</div>
 				<h2>Eye to Ear</h2>
-				<p className="pb-12">
-					Concept and composition for an iPad application enabling visually impaired individuals to experience visual art through interactive sonification. This project received multiple awards for innovation and impact, and was presented at the Kunstforum Wien during the Georgia O'Keeffe exhibition.
+				<p className="pb-16">
+				An iPad app designed to help visually impaired people experience visual art 
+				through interactive sound. The project won several innovation and impact awards 
+				and was showcased at Kunstforum Wien during the Georgia O’Keeffe exhibition.				
 				</p>
 
 				<div className="vimeoContainer">
@@ -45,7 +43,7 @@ const About = (props) => {
 					></iframe>
 				</div>
 				<h2>Volkswagen Mobiglobe</h2>
-				<p className="pb-12">
+				<p className="pb-16">
 					Interactive eight-channel composition for the gesture-based encyclopedia at Volkswagen headquarters in Wolfsburg.
 				</p>
 
@@ -59,9 +57,12 @@ const About = (props) => {
 					></iframe>
 				</div>
 				<h2>Sasso Museum</h2>
-				<p className="pb-12">
-					Sound design and installation of seven multimedia exhibits in the San Gottardo fortress museum, located in the Swiss Alps. These installations address topics such as energy, water, internet security, and climate change.
-				</p>
+				<p className="pb-16">
+				Designed and installed sound for seven multimedia
+				 exhibits in the San Gottardo fortress museum 
+				 (Swiss Alps). Topics included energy, water, 
+				 internet security, and climate change.	
+				 </p>
 
 				<div className="youtubeContainer">
 					<iframe
@@ -74,8 +75,8 @@ const About = (props) => {
 					></iframe>
 				</div>
 				<h2>MEDEL Triformance</h2>
-				<p className="pb-12">
-					Sound design for MEDEL hearing aid technology.
+				<p className="pb-16">
+					Provided Sound design for MEDEL's hearing aid technology.
 				</p>
 
 				<div className="youtubeContainer">
@@ -88,10 +89,52 @@ const About = (props) => {
 					/>
 				</div>
 				<h2>Project Management</h2>
-				<p className="pb-12">
-					Coordination of multidisciplinary teams for the development of amusement park rides, including oversight of design, engineering, construction, technology integration, scheduling, and regulatory compliance.
+				<p className="pb-16">
+				Coordinated multidisciplinary teams in the development 
+				of amusement park rides, managing design, engineering, 
+				construction, technology integration, scheduling, and 
+				regulatory compliance.</p>
+
+			{/* 	<div className="youtubeContainer">
+					
+				
+				</div> */}
+				<img className="AppImage" src={SP} alt="Daniel on a rock"/>
+				<h2>Theater App - Showpony</h2>
+				<p className="pb-16">
+					Conceptualized and programmed an app to streamline 
+					communication during rehearsals and performances. 
+					Displays calls for actors and departments, shares page numbers, 
+					and generates countdowns for timed cues. 
+					Supports local time tracking of events on each 
+					phone while keeping calls synced globally.<br />	
+					<a
+						href="https://stagepony.netlify.app/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-blue-500 underline"
+					>
+						Try the App
+					</a>
 				</p>
-			</div>
+
+				<img className="AppImageSpl" src={SPL} alt="Daniel on a rock"/>
+				<h2>Theater App - Stageplanner</h2>
+				<p className="pb-16">
+					Visual Stage Planning Web App
+					Programmed a web application for intuitive and consistent documentation of speaker 
+					positions, cable paths, and other stage elements. 
+					Simplifies stage planning and ensures uniform layouts across productions.<br />	
+					<a
+						href="https://stageplanner.netlify.app/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-blue-500 underline"
+					>
+						Try the App
+					</a>
+				</p>		
+			</div>	
 		</div>
 	);
 };
