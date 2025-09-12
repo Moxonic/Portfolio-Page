@@ -92,30 +92,9 @@ body {
     background: white;
     background-size: 100% 110%;
 
-    -webkit-animation: ColorgradientAnimation1 83s ease infinite;
-    -moz-animation: ColorgradientAnimation1 83s ease infinite;
-    -o-animation: ColorgradientAnimation1 83s ease infinite;
-    animation: ColorgradientAnimation1 20s ease infinite;
+   
 }
-@-webkit-keyframes ColorgradientAnimation1 {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-@-moz-keyframes ColorgradientAnimation1 {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-}
-@-o-keyframes ColorgradientAnimation1 {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:100% 0%}
-}
-@keyframes ColorgradientAnimation1 {
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
+
 }
 /*===================General Styles===================*/
 
