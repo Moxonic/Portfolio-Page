@@ -1,6 +1,5 @@
 import React from "react";
 import "./experience.css";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 
 /* 
 const eyeToEarAwards = ['Art Directors Club of Europe',
