@@ -32,7 +32,50 @@ const About = (props) => {
 				through interactive sound. The project won several innovation and impact awards 
 				and was showcased at Kunstforum Wien during the Georgia O’Keeffe exhibition.				
 				</p>
+				
+				<a
+					href="https://stagepony.netlify.app/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img className="AppImage" src={SP} alt="Showpony Screenshot"/>
+				</a>
+				<h2>Theater App - Showpony</h2>
+				<p className="pb-16">
+					Conceptualized and programmed an app to streamline 
+					communication during rehearsals and performances. 
+					Displays calls for actors and departments, shares page numbers, 
+					and generates countdowns for timed cues. 
+					Supports local time tracking of events on each 
+					phone while keeping calls synced globally.<br />	
+					<a
+						href="https://stagepony.netlify.app/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-blue-500 underline"
+					>
+						Try the App
+					</a>
+				</p>
 
+				<a href="https://stageplanner.netlify.app/" target="_blank" rel="noopener noreferrer">
+			    <img className="AppImageSpl" src={SPL} alt="Stageplanner Screenshot" />
+				</a>
+				<h2>Theater App - Stageplanner</h2>
+				<p className="pb-16">
+					Visual Stage Planning Web App
+					Programmed a web application for intuitive and consistent documentation of speaker 
+					positions, cable paths, and other stage elements. 
+					Simplifies stage planning and ensures uniform layouts across productions.<br />	
+					<a
+						href="https://stageplanner.netlify.app/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-blue-500 underline"
+					>
+						Try the App
+					</a>
+				</p>
 				<div className="vimeoContainer">
 					<iframe
 						className="vimeoIframe"
@@ -99,41 +142,8 @@ const About = (props) => {
 					
 				
 				</div> */}
-				<img className="AppImage" src={SP} alt="Daniel on a rock"/>
-				<h2>Theater App - Showpony</h2>
-				<p className="pb-16">
-					Conceptualized and programmed an app to streamline 
-					communication during rehearsals and performances. 
-					Displays calls for actors and departments, shares page numbers, 
-					and generates countdowns for timed cues. 
-					Supports local time tracking of events on each 
-					phone while keeping calls synced globally.<br />	
-					<a
-						href="https://stagepony.netlify.app/"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-blue-500 underline"
-					>
-						Try the App
-					</a>
-				</p>
+				
 
-				<img className="AppImageSpl" src={SPL} alt="Daniel on a rock"/>
-				<h2>Theater App - Stageplanner</h2>
-				<p className="pb-16">
-					Visual Stage Planning Web App
-					Programmed a web application for intuitive and consistent documentation of speaker 
-					positions, cable paths, and other stage elements. 
-					Simplifies stage planning and ensures uniform layouts across productions.<br />	
-					<a
-						href="https://stageplanner.netlify.app/"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-blue-500 underline"
-					>
-						Try the App
-					</a>
-				</p>		
 			</div>	
 		</div>
 	);
