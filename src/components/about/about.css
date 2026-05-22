@@ -1,111 +1,102 @@
-#about{
-    position:relative;
-    scroll-snap-align: start;
-   /*  min-height: 100vh; */
-    height:auto;
-    
+.about {
+  padding: 4rem 1rem 5rem;
+  background-color: var(--color-bg);
 }
 
-.container__about{
-    position:relative;
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    top: 50vh;
-    transform: translate(0%, -50%);
-    
+.projects-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.aboutme{
-    width: 100%;
+/* ── Project card ─────────────────────────────────────────── */
+.project-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--border-radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.about__text {
-    width: 50%;
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(76, 201, 240, 0.12);
 }
+
+.project-card h2 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.project-card p {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+/* ── Media embeds ─────────────────────────────────────────── */
+.embed-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Project screenshots ──────────────────────────────────── */
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+/* portrait app screenshot — stays small and centered like a phone screen */
+.project-image--phone {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Link ─────────────────────────────────────────────────── */
+.project-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  color: var(--color-white);
+}
+
+/* keep legacy jQuery word animation working if present */
 .word {
-    display: inline-block;
-    position: relative;
-    padding-left: 5px;
-    top:0;
-}
-
-.about__piccont{
-    width: 15cm;
-}
-.myPicAbout{
-    filter: drop-shadow(0px -2px 9px   rgba(1, 73, 255, 0.367));
-    width:8cm;
-    height: 8cm;
-    max-width: 50%;
-    max-height: 50%;
-    border-radius: 50%;
-}
-
-.logos{
-    display: flex;
-}
-.wifiLogo{
-    width: 4rem;
-   /*  margin: auto; */
-}
-.udemyLogo{
-    width: 8rem;
-  /*   margin: auto; */
-}
-
-iframe{
- margin:auto;
- width: 100%;
- height: 100%;
-}
-
-.vimeoContainer, .youtubeContainer{
-    margin-bottom: 1rem;
-}
-.youtubeContainer {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (height:width ratio) */
-  }
-  
-  .youtubeIframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .vimeoContainer {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-  }
-
-  .vimeoIframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-.AppImage{
-    width: 150px;
-    margin:auto;
-    max-width: 600px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1rem;
-}
-.AppImageSpl{
-    padding: 10px;
-    margin:auto;
-    max-width: 600px;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1rem;
+  display: inline-block;
+  position: relative;
+  padding-left: 5px;
 }

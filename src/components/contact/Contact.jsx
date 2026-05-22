@@ -1,64 +1,48 @@
 import React from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
-import { BsWhatsapp } from "react-icons/bs";
-import {BsLinkedin} from 'react-icons/bs'
-import {BsGithub} from 'react-icons/bs'
-import FREEDSD from "../../assets/CvPhotoDanielSotoDelgado25.jpg";
-
+import { BsWhatsapp, BsLinkedin, BsGithub } from "react-icons/bs";
+import MYPIC from "../../assets/CvPhotoDanielSotoDelgado25.jpg";
 
 const Contact = () => {
-    return (
-        <section id="contact">
-            <h5>Contact me</h5>
-             <div className="me">
-                      <img className='myPic' src={FREEDSD} alt="Daniel looking good">
-                      </img>
-                    </div> 
-            <div className=" contact_container flex-col items-center pl-4 lg:flex-row">
-                <div >
-                    <article className="contact_option justify-center">
-                        <a href="mailto:d.soto@gmx.at" 
-                        className="flex justify-center">
-                            <MdOutlineEmail className="contactSymbol" />
-                            <h4 className='symboltext w-32'>Email</h4>
-                        </a>
-                    </article>
-                </div>
+  return (
+    <section id="contact">
+      <div className="contact-photo">
+        <img src={MYPIC} alt="Daniel Soto Delgado" />
+      </div>
+      <h5>Get in touch</h5>
 
-                <div>
-                    <article className="contact_option">
-                        <a href="https://wa.me/4793926209" target="_blank" rel="noreferrer" 
-                        className="flex justify-center">
-                            <BsWhatsapp className="contactSymbol" />
-                            <h4 className='symboltext w-32'>WhatsApp</h4>
-                        </a>
-                    </article>
-                </div>
+      <div className="contact_container">
+        <article className="contact_option">
+          <a href="mailto:d.soto@gmx.at" className="contact_link">
+            <MdOutlineEmail className="contactSymbol" />
+            <span>Email</span>
+          </a>
+        </article>
 
-                <div>
-                    <article className="contact_option">
-                        <a href='https://www.linkedin.com/in/daniel-soto-delgado-21368866/' target='_blank' rel="noreferrer"  
-                        className="flex justify-center">
-                            <BsLinkedin className='contactSymbol'/>
-                            <h4  className='symboltext w-32'>LinkedIn</h4>
-                            </a>
-                    </article>
-                </div>
+        <article className="contact_option">
+          <a href="https://wa.me/4793926209" target="_blank" rel="noreferrer" className="contact_link">
+            <BsWhatsapp className="contactSymbol" />
+            <span>WhatsApp</span>
+          </a>
+        </article>
 
-                <div>
-                    <article className="contact_option">
-                        <a href="https://github.com/Moxonic" target="_blank" rel="noreferrer" 
-                        className="flex justify-center">
-                            <BsGithub className="contactSymbol" />
-                            <h4 className='symboltext w-32'>Github</h4>
-                        </a>
-                    </article>
-                </div>
-                {/* <div className='end'></div> */}
-            </div>
-        </section>
-    );
+        <article className="contact_option">
+          <a href="https://www.linkedin.com/in/daniel-soto-delgado-21368866/" target="_blank" rel="noreferrer" className="contact_link">
+            <BsLinkedin className="contactSymbol" />
+            <span>LinkedIn</span>
+          </a>
+        </article>
+
+        <article className="contact_option">
+          <a href="https://github.com/Moxonic" target="_blank" rel="noreferrer" className="contact_link">
+            <BsGithub className="contactSymbol" />
+            <span>GitHub</span>
+          </a>
+        </article>
+      </div>
+    </section>
+  );
 };
 
 export default Contact;

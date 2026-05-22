@@ -1,36 +1,46 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, useParams, useSearchParams } from 'react-router-dom';
-import About from './components/about/About.jsx'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BsSun, BsMoon } from 'react-icons/bs';
+import About from './components/about/About.jsx';
 import Header from './components/header/Header';
-import Nav from './components/nav/Nav.jsx';
-import Experience from './components/experience/Experience';
 import Contact from './components/contact/Contact';
-import Videos from './components/videos/Videos';
 import "animate.css/animate.min.css";
-import Portfolio from './components/portfolio/Portfolio';
-
-/* function customText(){
-  let{text}=useParams();
-  console.log(text);
-} */
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('darkMode');
+    return saved !== null ? saved === 'true' : true;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', darkMode);
+    if (darkMode) {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  }, [darkMode]);
+
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="*" element={
-        <div>
-          
-         {/*  <Nav /> */}
-          <Header />
-          {/* <Portfolio />  */}
-          <About/>
-          <Contact />
-        </div>
-      } />
-    </Routes>
-  </BrowserRouter>
-  )
-}
+      <Routes>
+        <Route path="*" element={
+          <div>
+            <button
+              className="theme-toggle"
+              onClick={() => setDarkMode(!darkMode)}
+              aria-label="Toggle theme"
+            >
+              {darkMode ? <BsSun /> : <BsMoon />}
+            </button>
+            <Header />
+            <About />
+            <Contact />
+          </div>
+        } />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;
