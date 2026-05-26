@@ -2,48 +2,33 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import SP  from '../../assets/SPOStill.png';
 import SPL from '../../assets/SPstill.jpg';
+import './about.css';
 
-/* ── Filled diagonal divider ────────────────────────────────
-   dir='up'  → line goes ╱ (bottom-left → top-right)
-   dir='down' → line goes ╲ (top-left → bottom-right)
-   `from` = current section bg, `to` = next section bg        */
+/* ── Diagonal divider ──────────────────────────────────────────
+   `from` / `to` are hex colours — must stay as inline since they
+   are prop-driven values, not static CSS.                        */
 const Diagonal = ({ from = '#111111', to = '#080808', dir = 'up' }) => {
   const clipPath = dir === 'up'
-    ? 'polygon(0 100%, 100% 0, 100% 100%)'   /* lower-right triangle = `to` */
-    : 'polygon(0 0, 0 100%, 100% 100%)';       /* lower-left  triangle = `to` */
+    ? 'polygon(0 100%, 100% 0, 100% 100%)'
+    : 'polygon(0 0, 0 100%, 100% 100%)';
   const line = dir === 'up'
     ? { x1: 0, y1: 60, x2: 1440, y2: 0 }
     : { x1: 0, y1: 0,  x2: 1440, y2: 60 };
   return (
-    <div style={{ height: '60px', background: from, flexShrink: 0, position: 'relative', overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', inset: 0, background: to, clipPath }} />
-      <svg viewBox="0 0 1440 60" preserveAspectRatio="none"
-           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}>
+    <div className="diagonal" style={{ background: from }}>
+      <div className="diagonal__fill" style={{ background: to, clipPath }} />
+      <svg className="diagonal__svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
         <line {...line} stroke="rgba(212,168,75,0.22)" strokeWidth="1.2" />
       </svg>
     </div>
   );
 };
 
-/* ── Role badge ─────────────────────────────────────────────── */
 const RoleBadge = ({ label }) => (
-  <span style={{
-    display: 'inline-block',
-    fontSize: '0.6rem',
-    letterSpacing: '0.1em',
-    textTransform: 'uppercase',
-    fontWeight: 600,
-    color: 'var(--accent)',
-    background: 'rgba(212,168,75,0.08)',
-    border: '1px solid rgba(212,168,75,0.22)',
-    borderRadius: '4px',
-    padding: '0.18rem 0.55rem',
-  }}>
-    {label}
-  </span>
+  <span className="role-badge">{label}</span>
 );
 
-/* ── Project data ───────────────────────────────────────────── */
+/* ── Project data ──────────────────────────────────────────── */
 const PROJECTS = [
   {
     id: '01',
@@ -123,228 +108,103 @@ const PROJECTS = [
   },
 ];
 
-/* ── 16:9 embed wrapper ─────────────────────────────────────── */
+/* ── 16:9 embed wrapper ────────────────────────────────────── */
 const EmbedBox = ({ src, title }) => (
-  <div style={{
-    position: 'relative',
-    width: '100%',
-    paddingBottom: '56.25%',
-    background: '#000',
-    borderRadius: '8px 8px 0 0',
-    overflow: 'hidden',
-    flexShrink: 0,
-  }}>
+  <div className="embed-box">
     <iframe
       src={src}
       title={title}
       allow="autoplay; fullscreen; encrypted-media"
       allowFullScreen
       loading="lazy"
-      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
     />
   </div>
 );
 
-/* ── Project card ───────────────────────────────────────────── */
-const ProjectCard = ({ project, index, wide = false }) => {
+/* ── Project card ──────────────────────────────────────────── */
+const ProjectCard = ({ project, index }) => {
   const ref    = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px 0px' });
 
-  /* Side-by-side layout for phone-screenshot projects (e.g. Showpony) */
   const isSideBySide = project.imageStyle === 'phone' && !project.embed;
-
-  const cardStyle = {
-    background: 'rgba(255,255,255,0.025)',
-    border: '1px solid rgba(255,255,255,0.07)',
-    borderRadius: '12px',
-    overflow: 'hidden',
-    display: 'flex',
-    flexDirection: isSideBySide ? 'row' : 'column',
-    transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
-    cursor: 'default',
-  };
 
   return (
     <motion.article
       ref={ref}
+      className={`project-card${isSideBySide ? ' project-card--row' : ''}`}
       initial={{ opacity: 0, y: 36 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.75, delay: index * 0.07, ease: [0.16, 1, 0.3, 1] }}
       whileHover={project.embed ? {} : { y: -5, transition: { duration: 0.3 } }}
-      style={cardStyle}
-      onMouseEnter={e => {
-        e.currentTarget.style.borderColor = 'rgba(212,168,75,0.22)';
-        e.currentTarget.style.boxShadow   = '0 12px 48px rgba(0,0,0,0.45)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
-        e.currentTarget.style.boxShadow   = 'none';
-      }}
     >
-      {/* Media — for side-by-side, image goes on the RIGHT */}
-      {project.embed && (
-        <EmbedBox src={project.embed.src} title={project.title} />
-      )}
+      {/* Embed */}
+      {project.embed && <EmbedBox src={project.embed.src} title={project.title} />}
+
+      {/* Stacked image (non-phone) */}
       {!project.embed && project.image && !isSideBySide && (
-        <div style={{
-          background: '#0a0a0a',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: project.imageStyle === 'phone' ? '2rem' : 0,
-          borderRadius: '8px 8px 0 0',
-          overflow: 'hidden',
-        }}>
-          <img
-            src={project.image}
-            alt={project.title}
-            style={{
-              width: project.imageStyle === 'phone' ? '140px' : '100%',
-              height: project.imageStyle === 'phone' ? 'auto' : '220px',
-              objectFit: 'cover',
-              borderRadius: project.imageStyle === 'phone' ? '10px' : '0',
-              boxShadow: project.imageStyle === 'phone' ? '0 8px 32px rgba(0,0,0,0.5)' : 'none',
-              display: 'block',
-            }}
-          />
+        <div className="project-card__image-wrap">
+          <img src={project.image} alt={project.title} className="project-card__image--full" />
+        </div>
+      )}
+
+      {/* Phone image (stacked, padded) */}
+      {!project.embed && project.image && isSideBySide === false && project.imageStyle === 'phone' && (
+        <div className="project-card__image-wrap project-card__image-wrap--padded">
+          <img src={project.image} alt={project.title} className="project-card__image--phone" />
         </div>
       )}
 
       {/* Content */}
-      <div style={{ padding: '1.4rem 1.6rem 1.6rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '0.7rem', order: isSideBySide ? 0 : undefined }}>
-        {/* Roles */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
+      <div className="project-card__content">
+        <div className="project-card__roles">
           {project.roles.map(r => <RoleBadge key={r} label={r} />)}
         </div>
 
-        {/* Title + meta row */}
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '0.5rem', flexWrap: 'wrap' }}>
-          <h3 style={{
-            fontFamily: '"Space Grotesk", sans-serif',
-            fontSize: 'clamp(1.05rem, 1.8vw, 1.3rem)',
-            fontWeight: 600,
-            color: 'var(--text)',
-            letterSpacing: '-0.01em',
-            lineHeight: 1.2,
-          }}>
-            {project.title}
-          </h3>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
-            <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', letterSpacing: '0.06em' }}>{project.year}</span>
-            <span style={{ width: '1px', height: '0.7rem', background: 'var(--border)' }} />
-            <span style={{ fontSize: '0.65rem', color: 'var(--text-muted)', letterSpacing: '0.04em' }}>{project.category}</span>
+        <div className="project-card__meta-row">
+          <h3 className="project-card__title">{project.title}</h3>
+          <div className="project-card__meta">
+            <span className="project-card__year">{project.year}</span>
+            <span className="project-card__divider" />
+            <span className="project-card__category">{project.category}</span>
           </div>
         </div>
 
-        {/* Description */}
-        <p style={{
-          fontSize: '0.875rem',
-          lineHeight: 1.72,
-          color: 'var(--text-2)',
-          flex: 1,
-        }}>
-          {project.description}
-        </p>
+        <p className="project-card__description">{project.description}</p>
 
-        {/* Link */}
         {project.link && (
           <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.35rem',
-              fontSize: '0.75rem',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: 'var(--accent)',
-              fontWeight: 600,
-              marginTop: '0.2rem',
-              transition: 'opacity 0.2s',
-            }}
-            onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
-            onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+            className="project-card__link"
           >
-            Try the App <span style={{ fontSize: '0.9em' }}>→</span>
+            Try the App <span>→</span>
           </a>
         )}
       </div>
 
-      {/* Side-by-side: phone image on the RIGHT */}
+      {/* Side image panel */}
       {isSideBySide && (
-        <div style={{
-          background: '#0a0a0a',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '2rem 1.8rem',
-          flexShrink: 0,
-          width: 'clamp(140px, 22%, 200px)',
-          order: 1,
-        }}>
-          <img
-            src={project.image}
-            alt={project.title}
-            style={{
-              width: '100%',
-              height: 'auto',
-              borderRadius: '10px',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.55)',
-              display: 'block',
-            }}
-          />
+        <div className="project-card__side-image">
+          <img src={project.image} alt={project.title} />
         </div>
       )}
     </motion.article>
   );
 };
 
-/* ── About section ──────────────────────────────────────────── */
+/* ── About section ─────────────────────────────────────────── */
 const About = () => {
   const introRef    = useRef(null);
   const workRef     = useRef(null);
   const introInView = useInView(introRef, { once: true, margin: '-60px 0px' });
   const workInView  = useInView(workRef,  { once: true, margin: '-60px 0px' });
 
-  /* Group into featured (full-width) vs pairs */
-  const featured = PROJECTS.filter(p => p.featured);
-  const regular  = PROJECTS.filter(p => !p.featured);
-
-  /* Build an ordered render list with layout hints */
-  const renderList = [];
-  let ri = 0;
-  PROJECTS.forEach((p, i) => {
-    if (p.featured) {
-      renderList.push({ type: 'full', project: p, index: i });
-    } else {
-      // Pair regular projects in twos
-      const next = PROJECTS[i + 1];
-      if (!p._paired) {
-        if (next && !next.featured && !next._paired) {
-          next._paired = true;
-          renderList.push({ type: 'pair', projects: [p, next], index: i });
-        } else {
-          renderList.push({ type: 'full', project: p, index: i });
-        }
-      }
-    }
-  });
-
   return (
     <>
-      {/* ── About intro ── */}
-      <section
-        ref={introRef}
-        style={{
-          background: '#111111',
-        }}
-      >
-        <div style={{
-          maxWidth: '860px',
-          padding: 'clamp(4.5rem, 9vw, 8rem) clamp(1.5rem, 6vw, 7rem) 0',
-        }}>
+      {/* About intro */}
+      <section ref={introRef} className="about-section">
+        <div className="about-section__content">
           <motion.p
             className="section-label"
             style={{ marginBottom: '2rem' }}
@@ -356,38 +216,18 @@ const About = () => {
           </motion.p>
 
           <motion.h2
-            style={{
-              fontFamily: '"Space Grotesk", sans-serif',
-              fontSize: 'clamp(1.5rem, 3vw, 2.6rem)',
-              fontWeight: 400,
-              lineHeight: 1.4,
-              color: 'var(--text)',
-              letterSpacing: '-0.012em',
-              marginBottom: '1.4rem',
-            }}
+            className="about-section__heading"
             initial={{ opacity: 0, y: 24 }}
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
             I work at the intersection of{' '}
-            <em style={{
-              fontFamily: '"Cormorant Garamond", serif',
-              fontStyle: 'italic',
-              color: 'var(--accent)',
-              fontSize: '1.08em',
-            }}>
-              sound, space, and technology
-            </em>{' '}
+            <em>sound, space, and technology</em>{' '}
             — composing, building, and leading across theater, installation, and software.
           </motion.h2>
 
           <motion.p
-            style={{
-              fontSize: '0.9rem',
-              lineHeight: 1.8,
-              color: 'var(--text-2)',
-              maxWidth: '640px',
-            }}
+            className="about-section__body"
             initial={{ opacity: 0, y: 20 }}
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.22 }}
@@ -401,75 +241,38 @@ const About = () => {
         <Diagonal from="#111111" to="#080808" dir="up" />
       </section>
 
-      {/* ── Selected Work ── */}
-      <section
-        id="work"
-        ref={workRef}
-        style={{
-          background: 'var(--bg)',
-          padding: 'clamp(3rem, 5vw, 5rem) clamp(1.5rem, 6vw, 7rem)',
-        }}
-      >
-        {/* Section heading */}
+      {/* Selected Work */}
+      <section id="work" ref={workRef} className="work-section">
         <motion.div
-          style={{
-            display: 'flex',
-            alignItems: 'baseline',
-            justifyContent: 'space-between',
-            marginBottom: 'clamp(2rem, 3.5vw, 3.5rem)',
-            flexWrap: 'wrap',
-            gap: '0.75rem',
-            borderBottom: '1px solid var(--border)',
-            paddingBottom: '1.2rem',
-          }}
+          className="work-section__header"
           initial={{ opacity: 0, y: 20 }}
           animate={workInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 style={{
-            fontFamily: '"Space Grotesk", sans-serif',
-            fontSize: 'clamp(1.5rem, 3vw, 2.4rem)',
-            fontWeight: 600,
-            letterSpacing: '-0.02em',
-            color: 'var(--text)',
-            lineHeight: 1,
-          }}>
-            Selected Work
-          </h2>
-          <span style={{ fontSize: '0.68rem', color: 'var(--text-muted)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
-            2013 — Present
-          </span>
+          <h2 className="work-section__title">Selected Work</h2>
+          <span className="work-section__range">2013 — Present</span>
         </motion.div>
 
-        {/* Project grid */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 2.5vw, 2rem)' }}>
+        <div className="work-section__grid">
           {PROJECTS.map((project, i) => {
-            /* skip _paired items — rendered as part of their pair row */
             if (project._paired) return null;
 
-            const nextProject = PROJECTS[i + 1];
-            const isPair = !project.featured && nextProject && !nextProject.featured && !nextProject._paired;
+            const next   = PROJECTS[i + 1];
+            const isPair = !project.featured && next && !next.featured && !next._paired;
 
             if (isPair) {
-              nextProject._paired = true;
+              next._paired = true;
               return (
-                <div
-                  key={project.id}
-                  style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 360px), 1fr))', gap: 'clamp(1rem, 2vw, 1.5rem)' }}
-                >
-                  <ProjectCard project={project}     index={i}   />
-                  <ProjectCard project={nextProject} index={i+1} />
+                <div key={project.id} className="project-pair-grid">
+                  <ProjectCard project={project} index={i}   />
+                  <ProjectCard project={next}    index={i+1} />
                 </div>
               );
             }
 
-            return (
-              <ProjectCard key={project.id} project={project} index={i} wide />
-            );
+            return <ProjectCard key={project.id} project={project} index={i} />;
           })}
         </div>
-
-        {/* No bottom diagonal here — Contact section has its own top diagonal */}
       </section>
     </>
   );

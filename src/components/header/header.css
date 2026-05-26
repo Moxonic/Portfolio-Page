@@ -1,120 +1,256 @@
-#header {
-  height: 100vh;
+/* ── Hero section ──────────────────────────────────────────── */
+.hero {
   position: relative;
-}
-
-.header__container {
-  height: 100%;
+  height: 100dvh;
+  min-height: 620px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, var(--color-bg) 0%, var(--color-bg-secondary) 100%);
-  position: relative;
+  background: var(--bg);
 }
 
-.header__content {
+/* ── Blob positions ────────────────────────────────────────── */
+.hero__blob-gold {
+  position: absolute;
+  bottom: -18%;
+  left: -10%;
+}
+
+.hero__blob-cool {
+  position: absolute;
+  top: -6%;
+  right: -4%;
+}
+
+/* ── Vertical marquee strip ────────────────────────────────── */
+.hero__marquee-strip {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 1.2rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.6rem;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 2;
 }
 
-.header__photo {
-  width: 130px;
-  height: 130px;
+.hero__marquee-inner {
+  writing-mode: vertical-rl;
+  display: flex;
+  gap: 2.5rem;
+  animation: marqueeVertical 28s linear infinite;
+  font-size: 0.55rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hero__marquee-inner span {
+  white-space: nowrap;
+}
+
+/* ── Main content ──────────────────────────────────────────── */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(1.8rem, 7vw, 8rem);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero__content-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* ── Label row ─────────────────────────────────────────────── */
+.hero__label-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.8rem;
+}
+
+.hero__label {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.hero__accent-line {
+  height: 1px;
+  background: linear-gradient(to right, rgba(212, 168, 75, 0.5), transparent);
+}
+
+/* ── Name ──────────────────────────────────────────────────── */
+.hero__name {
+  margin: 0;
+  padding: 0;
+  line-height: 0.88;
+}
+
+.hero__name-word {
+  overflow: hidden;
+  display: block;
+}
+
+.hero__name-span {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.4rem, 6.5vw, 6.5rem);
+  color: var(--text);
+  line-height: 0.95;
+  padding-bottom: 0.06em;
+}
+
+.hero__name-span--light {
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #e8e2d9;
+}
+
+.hero__name-span--bold {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* ── Profile photo ─────────────────────────────────────────── */
+.hero__photo {
+  flex-shrink: 0;
+}
+
+.hero__photo-frame {
+  width: clamp(140px, 18vw, 280px);
+  height: clamp(140px, 18vw, 280px);
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--color-accent);
-  box-shadow: 0 0 0 6px rgba(76, 201, 240, 0.08);
-  margin-bottom: 1.2rem;
-  transition: box-shadow 0.3s ease;
+  border: 2px solid rgba(212, 168, 75, 0.35);
+  box-shadow: 0 0 0 6px rgba(212, 168, 75, 0.06), 0 24px 64px rgba(0, 0, 0, 0.55);
 }
 
-.header__photo:hover {
-  box-shadow: 0 0 0 10px rgba(76, 201, 240, 0.14);
-}
-
-.header__photo img {
+.hero__photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.header__name {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  letter-spacing: -0.01em;
-}
-
-.header__subtitle {
-  font-size: 0.95rem;
-  color: var(--color-accent);
-  font-weight: 400;
-  letter-spacing: 0.06em;
-}
-
-.header__tags {
-  display: flex;
-  gap: 0.6rem;
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  margin-top: 0.2rem;
-}
-
-.header__dot {
-  opacity: 0.4;
-}
-
-/* ── Scroll hint ──────────────────────────────────────────── */
-.header__scroll-hint {
+/* ── Bottom bar ────────────────────────────────────────────── */
+.hero__bottom-bar {
   position: absolute;
-  bottom: 5.5rem;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  padding: 0 clamp(1.8rem, 7vw, 8rem);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
-  color: var(--color-text-muted);
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
+  justify-content: space-between;
+  gap: 1.5rem;
+  z-index: 3;
+}
+
+.hero__scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-shrink: 0;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 2.4rem;
+  background: linear-gradient(to bottom, transparent, var(--text-muted));
+}
+
+.hero__scroll-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  z-index: 2;
+  color: var(--text-muted);
 }
 
-.scroll-arrow {
-  font-size: 1.3rem;
-  color: var(--color-accent);
-  animation: bounce 1.8s ease-in-out infinite;
+.hero__discipline {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0);   opacity: 0.5; }
-  50%       { transform: translateY(8px); opacity: 1; }
+.hero__discipline-line {
+  width: 1.6rem;
+  height: 1px;
+  background: rgba(212, 168, 75, 0.4);
+  flex-shrink: 0;
 }
 
-/* ── Diagonal divider ─────────────────────────────────────── */
-.header__container::after {
-  content: '';
+.hero__discipline-ticker {
+  height: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  min-width: 180px;
+  max-width: 280px;
+}
+
+.hero__discipline-item {
+  position: absolute;
+  left: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-2);
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.hero__location {
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* ── Bottom diagonal ───────────────────────────────────────── */
+.hero__diagonal {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 70px;
-  background: var(--color-bg);
+  right: 0;
+  height: 60px;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.hero__diagonal-fill {
+  position: absolute;
+  inset: 0;
+  background: #111111;
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
-  pointer-events: none;
-  z-index: 1;
 }
 
-.header__diagonal {
+.hero__diagonal-svg {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
-  height: 70px;
-  pointer-events: none;
-  z-index: 2;
+  height: 100%;
+}
+
+@keyframes marqueeVertical {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+@media (max-width: 600px) {
+  .hero__marquee-strip { display: none; }
 }
