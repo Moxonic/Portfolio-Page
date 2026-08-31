@@ -305,9 +305,9 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            I work at the intersection of{' '}
-            <em>sound, space, and technology</em>{' '}
-            — composing, building, and leading across theater, installation, and software.
+            I work across{' '}
+            <em>sound, space, and technology</em>: composing, building, and
+            directing projects in theater, installations, and software.
           </motion.h2>
 
           <motion.p
@@ -316,9 +316,9 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.22 }}
           >
-            Over 15 years I've led AV productions in museums and corporate venues across Europe,
+            Over 15 years I've delivered AV productions in museums and corporate venues across Europe,
             composed spatial audio for interactive installations, managed complex engineering projects,
-            and developed web tools purpose-built for stage and live production teams.
+            and built web tools for stage and live production teams.
           </motion.p>
         </div>
 
