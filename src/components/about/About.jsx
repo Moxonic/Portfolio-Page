@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import SP  from '../../assets/SPOStill.png';
 import SPL from '../../assets/SPstill.jpg';
+import WC    from '../../assets/wordcardsScreenshot.png';
 import SASSO from '../../assets/sasso-poster.jpg';
 import './about.css';
 
@@ -40,6 +41,8 @@ const PROJECTS = [
     description:
       'A flashcard app for memorising vocabulary and definitions — build a deck, flip through it, and drill until it sticks. I built it to learn Norwegian, then kept it general enough for any subject.',
     link: 'https://mywordcards.netlify.app/',
+    image: WC,
+    imageStyle: 'phone',
     featured: true,
   },
   {
