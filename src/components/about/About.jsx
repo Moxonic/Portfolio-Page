@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import SP  from '../../assets/SPOStill.png';
 import SPL from '../../assets/SPstill.jpg';
+import SASSO from '../../assets/sasso-poster.jpg';
 import './about.css';
 
 /* ── Diagonal divider ──────────────────────────────────────────
@@ -30,6 +31,17 @@ const RoleBadge = ({ label }) => (
 
 /* ── Project data ──────────────────────────────────────────── */
 const PROJECTS = [
+  {
+    id: '00',
+    title: 'WordCards',
+    year: '2025',
+    category: 'Learning',
+    roles: ['Frontend Development', 'Product Design', 'Programming'],
+    description:
+      'A flashcard app for memorising vocabulary and definitions — build a deck, flip through it, and drill until it sticks. I built it to learn Norwegian, then kept it general enough for any subject.',
+    link: 'https://mywordcards.netlify.app/',
+    featured: true,
+  },
   {
     id: '01',
     title: 'Eye to Ear',
@@ -72,7 +84,6 @@ const PROJECTS = [
     roles: ['Composition', 'Spatial Audio'],
     description:
       'Composed an eight-channel interactive soundscape for the gesture-driven knowledge encyclopedia at Volkswagen\'s global headquarters in Wolfsburg. Sound responds in real time to visitor gestures across the installation.',
-    embed: { src: 'https://player.vimeo.com/video/127020709?h=b8366ff9e9' },
     featured: true,
   },
   {
@@ -83,7 +94,7 @@ const PROJECTS = [
     roles: ['Sound Design', 'AV Installation'],
     description:
       'Designed and installed immersive audio for seven multimedia exhibits inside the historic San Gottardo mountain fortress (Swiss Alps). Themes included energy, water, internet security and climate change.',
-    embed: { src: 'https://player.vimeo.com/video/126129405?h=dbfddfd934' },
+    embed: { src: 'https://player.vimeo.com/video/126129405?h=dbfddfd934', poster: SASSO },
   },
   {
     id: '06',
@@ -108,18 +119,59 @@ const PROJECTS = [
   },
 ];
 
-/* ── 16:9 embed wrapper ────────────────────────────────────── */
-const EmbedBox = ({ src, title }) => (
-  <div className="embed-box">
-    <iframe
-      src={src}
-      title={title}
-      allow="autoplay; fullscreen; encrypted-media"
-      allowFullScreen
-      loading="lazy"
-    />
-  </div>
-);
+/* ── 16:9 embed wrapper ────────────────────────────────────────
+   Cross-origin video iframes swallow the wheel event, so Lenis
+   never gets to scroll the page while the pointer is over one.
+   We render a lightweight click-to-play facade instead: the real
+   iframe is only mounted after the user clicks play, so scrolling
+   works over every video in its default state.                    */
+const posterFor = (src) => {
+  const yt = src.match(/youtube\.com\/embed\/([\w-]+)/);
+  return yt ? `https://i.ytimg.com/vi/${yt[1]}/hqdefault.jpg` : null;
+};
+
+const withAutoplay = (src) =>
+  `${src}${src.includes('?') ? '&' : '?'}autoplay=1`;
+
+const EmbedBox = ({ src, title, poster }) => {
+  const [playing, setPlaying] = useState(false);
+  const posterUrl = poster || posterFor(src);
+
+  if (playing) {
+    return (
+      <div className="embed-box">
+        <iframe
+          src={withAutoplay(src)}
+          title={title}
+          allow="autoplay; fullscreen; encrypted-media"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="embed-box">
+      <button
+        type="button"
+        className="embed-box__facade"
+        onClick={() => setPlaying(true)}
+        aria-label={`Play video: ${title}`}
+        style={posterUrl ? { backgroundImage: `url(${posterUrl})` } : undefined}
+      >
+        <span className="embed-box__play" aria-hidden="true">
+          <svg viewBox="0 0 68 48" width="68" height="48">
+            <path
+              className="embed-box__play-bg"
+              d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
+            />
+            <path d="M45 24 27 14v20z" fill="#fff" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  );
+};
 
 /* ── Project card ──────────────────────────────────────────── */
 const ProjectCard = ({ project, index }) => {
@@ -138,7 +190,9 @@ const ProjectCard = ({ project, index }) => {
       whileHover={project.embed ? {} : { y: -5, transition: { duration: 0.3 } }}
     >
       {/* Embed */}
-      {project.embed && <EmbedBox src={project.embed.src} title={project.title} />}
+      {project.embed && (
+        <EmbedBox src={project.embed.src} poster={project.embed.poster} title={project.title} />
+      )}
 
       {/* Stacked image (non-phone) */}
       {!project.embed && project.image && !isSideBySide && (
@@ -192,6 +246,33 @@ const ProjectCard = ({ project, index }) => {
     </motion.article>
   );
 };
+
+/* ── Render a list of project cards, pairing consecutive
+   non-featured ones into a 2-up grid ──────────────────────── */
+const renderProjectList = (projects) => {
+  const out = [];
+  for (let i = 0; i < projects.length; i++) {
+    const project = projects[i];
+    const next    = projects[i + 1];
+    const isPair  = !project.featured && next && !next.featured;
+
+    if (isPair) {
+      out.push(
+        <div key={project.id} className="project-pair-grid">
+          <ProjectCard project={project} index={i}     />
+          <ProjectCard project={next}    index={i + 1} />
+        </div>
+      );
+      i += 1; // consumed `next`
+    } else {
+      out.push(<ProjectCard key={project.id} project={project} index={i} />);
+    }
+  }
+  return out;
+};
+
+const APPS       = PROJECTS.filter(p => p.link);
+const OTHER_WORK = PROJECTS.filter(p => !p.link);
 
 /* ── About section ─────────────────────────────────────────── */
 const About = () => {
@@ -253,25 +334,18 @@ const About = () => {
           <span className="work-section__range">2013 — Present</span>
         </motion.div>
 
-        <div className="work-section__grid">
-          {PROJECTS.map((project, i) => {
-            if (project._paired) return null;
+        <div className="work-section__group">
+          <h3 className="work-section__group-title">Apps</h3>
+          <div className="work-section__grid">
+            {renderProjectList(APPS)}
+          </div>
+        </div>
 
-            const next   = PROJECTS[i + 1];
-            const isPair = !project.featured && next && !next.featured && !next._paired;
-
-            if (isPair) {
-              next._paired = true;
-              return (
-                <div key={project.id} className="project-pair-grid">
-                  <ProjectCard project={project} index={i}   />
-                  <ProjectCard project={next}    index={i+1} />
-                </div>
-              );
-            }
-
-            return <ProjectCard key={project.id} project={project} index={i} />;
-          })}
+        <div className="work-section__group">
+          <h3 className="work-section__group-title">Sound &amp; Installation</h3>
+          <div className="work-section__grid">
+            {renderProjectList(OTHER_WORK)}
+          </div>
         </div>
       </section>
     </>
