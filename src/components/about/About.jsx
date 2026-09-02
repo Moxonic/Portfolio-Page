@@ -32,7 +32,7 @@ const RoleBadge = ({ label }) => (
 
 /* ── Project data ──────────────────────────────────────────── */
 const PROJECTS = [
-  {
+/*   {
     id: '00',
     title: 'WordCards',
     year: '2025',
@@ -44,7 +44,7 @@ const PROJECTS = [
     image: WC,
     imageStyle: 'phone',
     featured: true,
-  },
+  }, */
   {
     id: '01',
     title: 'Eye to Ear',
