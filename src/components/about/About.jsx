@@ -586,9 +586,11 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.22 }}
           >
-            Twenty years on, that spans AV and sound production across theatres, opera and live events in Norway, Austria and Switzerland. I've worked with{' '}
-            <em>Det Norske Teatret, Wiener Staatsoper, Musiktheater an der Wien and AIDA Cruises</em>,
-            {' '}plus technical and project-management roles building installations and attractions. I combine hands-on expertise with programming to build practical solutions—from AV systems and automation to production web apps that crews run during live shows.
+            Twenty years later, I've built a career across AV, sound, and live production in Norway, Austria, and Switzerland. I've worked with{' '}
+            <em>Det Norske Teatret, Wiener Staatsoper, Musiktheater an der Wien, and AIDA Cruises</em>,
+            {' '}alongside technical and project-management roles developing installations and attractions.
+            <br /><br />
+            Today, I combine hands-on production experience with programming to build practical solutions that work in the real world—from AV systems and automation to custom web apps that production crews use during live shows.
           </motion.p>
         </div>
 
