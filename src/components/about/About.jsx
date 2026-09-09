@@ -577,8 +577,7 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            I started in sound and built my foundation in AV. Now I pick up{' '}
-            <em>whatever the work needs</em>.
+            In the beginning there was <em>sound</em>…
           </motion.h2>
 
           <motion.p
