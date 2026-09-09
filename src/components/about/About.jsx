@@ -90,7 +90,7 @@ const PROJECTS = [
     category: 'Web App · Theater',
     roles: ['Coding', 'Product Design'],
     description:
-      'A stage and show cueing tool for triggering and following cues live. Built for operators who need the next cue always one tap away, with the whole running order visible at a glance.',
+      'Built for directors who want to control the live sound during rehearsals, small independent theater productions or events.',
     link: 'https://cuetap.netlify.app/',
     image: CT,
     imageStyle: 'phone',
