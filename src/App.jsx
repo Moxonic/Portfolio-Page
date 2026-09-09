@@ -20,6 +20,9 @@ const App = () => {
       smoothWheel: true,
       wheelMultiplier: 0.8,
       touchMultiplier: 1.5,
+      // Let the horizontal work carousels handle their own gestures
+      // instead of Lenis swallowing the wheel event over them.
+      allowNestedScroll: true,
     });
 
     lenis.on('scroll', ScrollTrigger.update);
