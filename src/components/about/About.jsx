@@ -577,8 +577,8 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            I came up in sound, and kept picking up{' '}
-            <em>whatever the work needed next</em>.
+            I started in sound and built my foundation in AV. Now I pick up{' '}
+            <em>whatever the work needs</em>.
           </motion.h2>
 
           <motion.p
@@ -587,10 +587,9 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.22 }}
           >
-            Twenty years on, that means professional AV in museums, theaters and
-            corporate venues across Europe; production web apps I built end to end
-            that crews now run during live shows; and technical lead on
-            cross-functional builds from concept to opening day.
+            Twenty years on, that spans AV and sound production across theatres, opera and live events in Norway, Austria and Switzerland. I've worked with{' '}
+            <em>Det Norske Teatret, Wiener Staatsoper, Musiktheater an der Wien and AIDA Cruises</em>,
+            {' '}plus technical and project-management roles building installations and attractions. I combine hands-on expertise with programming to build practical solutions—from AV systems and automation to production web apps that crews run during live shows.
           </motion.p>
         </div>
 
