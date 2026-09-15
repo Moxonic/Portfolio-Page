@@ -577,7 +577,7 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            In the beginning there was <em>sound</em>…
+            Hi, I'm <em>Daniel</em>.
           </motion.h2>
 
           <motion.p
@@ -586,11 +586,9 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.22 }}
           >
-            Twenty years later, I've built a career across AV, sound, and live production in Norway, Austria, and Switzerland. I've worked with{' '}
-            <em>Det Norske Teatret, Wiener Staatsoper, Musiktheater an der Wien, and AIDA Cruises</em>,
-            {' '}alongside technical and project-management roles developing installations and attractions.
+            I'm a sound engineer — twenty years across live shows, theatre, and installations around the world. I love playing guitar, and lately I've been building apps.
             <br /><br />
-            Today, I combine hands-on production experience with programming to build practical solutions that work in the real world—from AV systems and automation to custom web apps that production crews use during live shows.
+            Take a look at some of the things I've made below, and feel free to send me a message if you have any questions.
           </motion.p>
         </div>
 
