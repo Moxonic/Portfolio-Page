@@ -117,6 +117,15 @@
   display: none;
 }
 
+/* ── Grid ──────────────────────────────────────────────────────
+   Static alternative to the carousel: one column on mobile,
+   filling as many ~340px columns as fit on wider screens.       */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+}
+
 /* ── Project card ──────────────────────────────────────────── */
 .project-card {
   background: rgba(255, 255, 255, 0.025);

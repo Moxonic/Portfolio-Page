@@ -11,6 +11,8 @@ import TT1   from '../../assets/timetrail-walk.png';
 import TT2   from '../../assets/timetrail-place.png';
 import MOBI  from '../../assets/MobiGlobe5-1600x1000.jpg';
 import SASSO from '../../assets/sasso-poster.jpg';
+import VB from '../../assets/VoicebookScreenshot.png'
+import { getAboutVariant } from './aboutVariants';
 import './about.css';
 
 /* ── Diagonal divider ──────────────────────────────────────────
@@ -95,6 +97,19 @@ const PROJECTS = [
     image: CT,
     imageStyle: 'phone',
   },
+  {
+    id: '03.5',
+    group: 'code',
+    title: 'Voicebook',
+    year: '2026',
+    category: 'Social Media · Voice Database',
+    roles: ['Concept', 'Vibe Coding', 'UX Design'],
+    description:
+      'A voice-first social network where people discover singers, voice actors and broadcasters without visual distractions. Listen and rate anonymous recordings, then unlock the creator’s profile and connect.',
+    link: 'https://thevoicebook.netlify.app/',
+    image: VB,
+    imageStyle: 'phone',
+  },    
   {
     id: '04',
     group: 'code',
@@ -527,6 +542,17 @@ const ProjectCarousel = ({ projects, label, drift = false }) => {
   );
 };
 
+/* ── Project grid ───────────────────────────────────────────
+   Static responsive grid — every project shown once, each card
+   carrying its own staggered reveal. */
+const ProjectGrid = ({ projects, label }) => (
+  <div className="project-grid" role="region" aria-label={`${label} projects`}>
+    {projects.map((project, i) => (
+      <ProjectCard key={project.id} project={project} index={i} />
+    ))}
+  </div>
+);
+
 /* ── Work group ─────────────────────────────────────────────
    Cards inside a looping rail don't reveal individually (they'd
    re-fire as the rail scrolls), so the group carries the reveal. */
@@ -555,10 +581,12 @@ const INSTALLATION = PROJECTS.filter(p => p.group === 'installation');
 const About = () => {
   const introRef    = useRef(null);
   const introInView = useInView(introRef, { once: true, margin: '-60px 0px' });
+  const [intro]     = useState(getAboutVariant);
 
   return (
     <>
-      {/* About intro */}
+      {/* About intro — text chosen by the /about=<key> link (see aboutVariants.js) */}
+      {intro && (
       <section ref={introRef} className="about-section">
         <div className="about-section__content">
           <motion.p
@@ -577,28 +605,29 @@ const About = () => {
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
-            Hi, I'm <em>Daniel</em>.
+            {intro.heading}
           </motion.h2>
 
-          <motion.p
+          <motion.div
             className="about-section__body"
             initial={{ opacity: 0, y: 20 }}
             animate={introInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.22 }}
           >
-            I'm a sound engineer — twenty years across live shows, theatre, and installations around the world. I love playing guitar, and lately I've been building apps.
-            <br /><br />
-            Take a look at some of the things I've made below, and feel free to send me a message if you have any questions.
-          </motion.p>
+            {intro.body.map((para, i) => (
+              <p key={i} style={i > 0 ? { marginTop: '1.5em' } : undefined}>{para}</p>
+            ))}
+          </motion.div>
         </div>
 
         <Diagonal from="#111111" to="#080808" dir="up" />
       </section>
+      )}
 
       {/* Work */}
       <section id="work" className="work-section">
         <WorkGroup title="Apps">
-          <ProjectCarousel projects={CODE} label="App" />
+          <ProjectGrid projects={CODE} label="App" />
         </WorkGroup>
 
         <WorkGroup title="Installation & Sound">
