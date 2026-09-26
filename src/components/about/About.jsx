@@ -608,6 +608,17 @@ const About = () => {
             {intro.heading}
           </motion.h2>
 
+          {intro.subheading && (
+            <motion.p
+              className="about-section__subheading"
+              initial={{ opacity: 0, y: 20 }}
+              animate={introInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {intro.subheading}
+            </motion.p>
+          )}
+
           <motion.div
             className="about-section__body"
             initial={{ opacity: 0, y: 20 }}

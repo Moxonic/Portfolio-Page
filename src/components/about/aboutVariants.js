@@ -1,10 +1,11 @@
 /* ── About intro variants ───────────────────────────────────
-   Pick one via the URL: yoursite.com/about=<key>
+   Pick one via the URL: yoursite.com/about:<key>
    (or yoursite.com/?about=<key> on hosts without rewrites).
    Keys are matched case-insensitively. Anything that isn't a key
-   is shown as the intro text itself, e.g.
-   yoursite.com/about=I%20am%20a%20sound%20engineer.
-   With no about= at all, `default` is used; set it to null to hide
+   is shown as a subheader above the `general` intro, and
+   /header:<text> replaces the heading, e.g.
+   yoursite.com/header:Hi%20Bunny/about:I%20am%20a%20sound%20engineer.
+   With neither in the URL, `default` is used; set it to null to hide
    the intro for visitors who don't arrive through a tailored link.
 
    `body` is a list of paragraphs.                              */
@@ -32,25 +33,45 @@ const ABOUT_VARIANTS = {
 export const getAboutVariant = () => {
   if (typeof window === 'undefined') return ABOUT_VARIANTS.default;
 
-  const { pathname, search } = window.location;
-  const fromPath  = pathname.match(/\/about=(.+)$/i);
-  const fromQuery = new URLSearchParams(search).get('about');
+  const { header, about } = readUrlParams();
+  if (!header && !about) return ABOUT_VARIANTS.default;
 
-  let value = fromPath ? fromPath[1] : fromQuery || '';
-  try {
-    value = decodeURIComponent(value);
-  } catch {
-    // malformed % escape — show it as typed
-  }
-  value = value.trim();
-  if (!value) return ABOUT_VARIANTS.default;
+  const key   = about.toLowerCase();
+  const saved = about && key !== 'default' && ABOUT_VARIANTS[key];
 
-  const key = value.toLowerCase();
-  if (key !== 'default' && ABOUT_VARIANTS[key]) return ABOUT_VARIANTS[key];
-
-  // Not a saved variant: show the text itself. Newlines (%0A) split paragraphs.
-  return {
-    heading: ABOUT_VARIANTS.general.heading,
-    body: value.slice(0, 1200).split(/\n+/).map(p => p.trim()).filter(Boolean),
+  // A saved variant, or the general intro with the link's text as its subheader.
+  const variant = saved || {
+    ...ABOUT_VARIANTS.general,
+    subheading: about.slice(0, 300) || undefined,
   };
+
+  return header ? { ...variant, heading: header.slice(0, 120) } : variant;
+};
+
+/* Reads `header` and `about` from path segments like
+   /header:Hi%20Bunny/about:I%20make%20sound (":" or "=" both work)
+   or from ?header=…&about=…. A value runs until the next
+   /header: or /about: segment, so it may itself contain "/".   */
+const readUrlParams = () => {
+  const { pathname, search } = window.location;
+  const params = { header: '', about: '' };
+
+  const segment = /\/(header|about)(?::|%3A|=)(.*?)(?=\/(?:header|about)(?::|%3A|=)|$)/gi;
+  for (const [, name, raw] of pathname.matchAll(segment)) {
+    params[name.toLowerCase()] = decode(raw);
+  }
+
+  const query = new URLSearchParams(search);
+  for (const name of ['header', 'about']) {
+    if (!params[name] && query.get(name)) params[name] = query.get(name).trim();
+  }
+  return params;
+};
+
+const decode = (raw) => {
+  try {
+    return decodeURIComponent(raw).trim();
+  } catch {
+    return raw.trim();  // malformed % escape — show it as typed
+  }
 };
