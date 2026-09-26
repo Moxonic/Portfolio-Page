@@ -2,8 +2,8 @@
    Pick one via the URL: yoursite.com/about:<key>
    (or yoursite.com/?about=<key> on hosts without rewrites).
    Keys are matched case-insensitively. Anything that isn't a key
-   is shown as a subheader above the `general` intro, and
-   /header:<text> replaces the heading, e.g.
+   is shown as the subheader and /header:<text> as the heading —
+   only what's in the link, no standard text — e.g.
    yoursite.com/header:Hi%20Bunny/about:I%20am%20a%20sound%20engineer.
    With neither in the URL, `default` is used; set it to null to hide
    the intro for visitors who don't arrive through a tailored link.
@@ -39,10 +39,10 @@ export const getAboutVariant = () => {
   const key   = about.toLowerCase();
   const saved = about && key !== 'default' && ABOUT_VARIANTS[key];
 
-  // A saved variant, or the general intro with the link's text as its subheader.
+  // A saved variant, or only the text typed into the link — nothing standard.
   const variant = saved || {
-    ...ABOUT_VARIANTS.general,
     subheading: about.slice(0, 300) || undefined,
+    body: [],
   };
 
   return header ? { ...variant, heading: header.slice(0, 120) } : variant;

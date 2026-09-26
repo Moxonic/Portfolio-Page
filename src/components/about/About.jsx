@@ -599,14 +599,16 @@ const About = () => {
             About
           </motion.p>
 
-          <motion.h2
-            className="about-section__heading"
-            initial={{ opacity: 0, y: 24 }}
-            animate={introInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {intro.heading}
-          </motion.h2>
+          {intro.heading && (
+            <motion.h2
+              className="about-section__heading"
+              initial={{ opacity: 0, y: 24 }}
+              animate={introInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {intro.heading}
+            </motion.h2>
+          )}
 
           {intro.subheading && (
             <motion.p
@@ -619,16 +621,18 @@ const About = () => {
             </motion.p>
           )}
 
-          <motion.div
-            className="about-section__body"
-            initial={{ opacity: 0, y: 20 }}
-            animate={introInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.22 }}
-          >
-            {intro.body.map((para, i) => (
-              <p key={i} style={i > 0 ? { marginTop: '1.5em' } : undefined}>{para}</p>
-            ))}
-          </motion.div>
+          {intro.body.length > 0 && (
+            <motion.div
+              className="about-section__body"
+              initial={{ opacity: 0, y: 20 }}
+              animate={introInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.22 }}
+            >
+              {intro.body.map((para, i) => (
+                <p key={i} style={i > 0 ? { marginTop: '1.5em' } : undefined}>{para}</p>
+              ))}
+            </motion.div>
+          )}
         </div>
 
         <Diagonal from="#111111" to="#080808" dir="up" />
